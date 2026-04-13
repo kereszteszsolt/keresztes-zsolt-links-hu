@@ -6,17 +6,29 @@
   "updatedAt": "Apache License 2.0",
   "sections": [
     {
-      "heading": "Kód újrafelhasználása",
+      "heading": "Licenc és újrafelhasználás",
       "paragraphs": [
         "A weboldal forráskódja az Apache License 2.0 licenc alatt érhető el.",
-        "Szabadon fork-olhatod, módosíthatod és újra felhasználhatod a kódot saját projektjeidhez, beleértve a linkgyűjtemény vagy profiljellegű alkalmazásokat is, feltéve hogy a használat megfelel a licenc feltételeinek.",
-        "Ha újra felhasználod a kódot, célszerű a benne szereplő adatokat, tartalmakat vagy azonosítókat lecserélni vagy átdolgozni, hogy elkerüld az eredeti projekttel kapcsolatos félreértéseket vagy megtévesztő megjelenítést."
+        "A kód a licenc feltételei szerint újra felhasználható, de ez a repó egy konkrét oldal megvalósítása, nem pedig az ajánlott alap új projektekhez.",
+        "Ha ebből a repóból nézel megoldásokat vagy használsz fel kódrészleteket, célszerű a benne szereplő adatokat, tartalmakat és azonosítókat lecserélni vagy átdolgozni, hogy elkerüld az eredeti projekttel kapcsolatos félreértéseket vagy megtévesztő megjelenítést."
+      ]
+    },
+    {
+      "heading": "Ajánlott kiindulópont",
+      "paragraphs": [
+        "Ha saját linkgyűjteményt vagy profiljellegű weboldalt szeretnél készíteni, akkor ehhez az ingyenes Profile Links Starter sablon repót érdemes fork-olni vagy sablonként használni.",
+        "A legtöbb esetben nem ezt a jelenlegi oldalrepót érdemes közvetlenül fork-olni, mert a sablon repó kifejezetten tiszta testreszabásra és újrahasznosításra készült.",
+        "Ez a repó inkább egy valós példaprojektként hasznos, míg a saját változatodhoz a sablon repó az ajánlott alap."
       ]
     }
   ],
   "actions": [
     {
-      "label": "GitHub repó megnyitása",
+      "label": "Sablon repó megnyitása",
+      "href": "https://github.com/kereszteszsolt/profile-links-starter"
+    },
+    {
+      "label": "A példaprojekt repójának megnyitása",
       "href": "https://github.com/kereszteszsolt/keresztes-zsolt-links-hu"
     },
     {

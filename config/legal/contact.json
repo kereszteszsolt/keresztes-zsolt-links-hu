@@ -18,9 +18,9 @@
       "label": "E-mail {{email}}",
       "email": true,
       "emailParts": [
-        "contact@",
+        "kapcsolat@",
         "kereszteszsolt",
-        ".com"
+        ".hu"
       ],
       "emailOrder": [
         0,
