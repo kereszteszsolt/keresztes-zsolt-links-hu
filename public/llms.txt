@@ -12,7 +12,7 @@ Kategória: Linkgyűjtemény
 - Név: Keresztes Zsolt
 - Domain: zsoltkeresztes.hu
 - Szerep: fejlesztő · mérnök · tartalomkészítő
-- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő. Magyar és angol nyelven készítek önfejlesztési és STEM tartalmakat, és dolgokat építek a weben.
+- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő. Magyarul és angolul készítek önfejlesztési és STEM tartalmakat, emellett különféle fejlesztői projekteken dolgozom.
 
 ## Profiladatok
 
@@ -34,8 +34,8 @@ Kategória: Linkgyűjtemény
 ## Linkek kategóriánként
 
 ### Videóplatform
-- YouTube (EN): Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia - https://www.youtube.com/@KeresztesZsolti
-- YouTube (HU): Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia - https://www.youtube.com/@KeresztesZsolt
+- YouTube (EN): Keresztes Zsolt - Vlog, Self-Dev, Science&Tech - https://www.youtube.com/@KeresztesZsolti
+- YouTube (HU): Keresztes Zsolt - Vlog,Önfejlesztés,Tudomány&Tech - https://www.youtube.com/@KeresztesZsolt
 - TikTok (EN): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsoltie
 - TikTok (HU): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsolti
 
