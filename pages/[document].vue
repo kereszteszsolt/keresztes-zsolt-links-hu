@@ -35,7 +35,7 @@ if (!legalDocument) {
 const { resolvedActions: resolvedLegalActions } = useResolvedLegalActions(legalDocument.actions ?? [])
 
 const pageTitle = `${legalDocument.title} | ${site.siteTitle}`
-const pageDescription = `${legalDocument.title} for ${site.siteName}.`
+const pageDescription = `${legalDocument.title} a(z) ${site.siteName} webhelyhez.`
 const pageUrl = toAbsoluteUrl(`/${legalDocument.id}`)
 
 useHead({
@@ -66,7 +66,7 @@ useSeoMeta({
     <main class="layout legal-layout">
       <section class="panel legal-page-panel">
         <NuxtLink class="legal-back-link" to="/">
-          Back to profile links
+          Vissza a linkgyűjteményhez
         </NuxtLink>
         <div class="legal-page-header">
           <div>

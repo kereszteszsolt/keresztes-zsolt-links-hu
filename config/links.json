@@ -2,12 +2,12 @@
   "filters": [
     {
       "id": "all",
-      "label": "All",
+      "label": "Összes",
       "type": "all"
     },
     {
       "id": "work",
-      "label": "Work",
+      "label": "Munka",
       "type": "category",
       "categories": [
         "work"
@@ -15,7 +15,7 @@
     },
     {
       "id": "social",
-      "label": "Social",
+      "label": "Közösségi média",
       "type": "category",
       "categories": [
         "social"
@@ -23,29 +23,92 @@
     },
     {
       "id": "watch",
-      "label": "Watch",
+      "label": "Videóplatform",
       "type": "category",
       "categories": [
         "watch"
+      ]
+    },
+    {
+      "id": "dev",
+      "label": "Fejlesztés",
+      "type": "category",
+      "categories": [
+        "dev"
+      ]
+    },
+    {
+      "id": "support",
+      "label": "Támogatás",
+      "type": "category",
+      "categories": [
+        "support"
+      ]
+    },
+    {
+      "id": "links",
+      "label": "Linkgyűjtők",
+      "type": "category",
+      "categories": [
+        "links"
       ]
     }
   ],
   "items": [
     {
+      "id": "youtube-en",
+      "url": "https://www.youtube.com/@KeresztesZsolti",
+      "provider": "YouTube",
+      "providerExtra": "EN",
+      "category": "watch",
+      "tags": [
+        "english",
+        "video-platform"
+      ],
+      "title": "Keresztes Zsolt - Vlog, Self-Dev, Science&Tech",
+      "description": "Önfejlesztési és STEM tartalmak angol, román és német nyelven.",
+      "icon": "youtube",
+      "profileId": "@KeresztesZsolti",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#ff0000",
+        "iconScale": 1
+      }
+    },
+    {
+      "id": "youtube-hu",
+      "url": "https://www.youtube.com/@KeresztesZsolt",
+      "provider": "YouTube",
+      "providerExtra": "HU",
+      "category": "watch",
+      "tags": [
+        "hungarian",
+        "video-platform"
+      ],
+      "title": "Keresztes Zsolt - Vlog,Önfejlesztés,Tudomány&Tech",
+      "description": "Önfejlesztési és STEM tartalmak magyar nyelven.",
+      "icon": "youtube",
+      "profileId": "@KeresztesZsolt",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#ff0000",
+        "iconScale": 1
+      }
+    },
+    {
       "id": "linkedin",
-      "url": "https://www.linkedin.com/in/your-user-id",
+      "url": "https://www.linkedin.com/in/kereszteszsolt",
       "provider": "LinkedIn",
       "category": "work",
       "tags": [
         "professional",
         "social-media"
       ],
-      "title": "Your Name",
-      "description": "Professional profile, experience highlights, and collaboration background.",
+      "title": "Keresztes Zsolt",
+      "description": "Szakmai profil. STEM, önfejlesztés és projektfrissítések.",
       "icon": "linkedin",
-      "profileId": "your-user-id",
-      "segmentMark": "2",
-      "featured": true,
+      "profileId": "kereszteszsolt",
+      "segmentMark": 2,
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#0a66c2",
@@ -53,73 +116,60 @@
       }
     },
     {
-      "id": "github",
-      "url": "https://github.com/your-user-id",
-      "provider": "GitHub",
-      "category": "work",
+      "id": "tiktok-en",
+      "url": "https://www.tiktok.com/@kereszteszsoltie",
+      "provider": "TikTok",
+      "providerExtra": "EN",
+      "category": "watch",
       "tags": [
-        "code",
-        "dev"
+        "english",
+        "social-media",
+        "video-platform"
       ],
-      "title": "@your-user-id",
-      "description": "Code samples, experiments, and starter projects.",
-      "icon": "github",
-      "profileId": "@your-user-id",
+      "title": "Keresztes Zsolt",
+      "description": "Önfejlesztési és STEM tartalmak angol, román és német nyelven.",
+      "icon": "tiktok",
+      "profileId": "@kereszteszsoltie",
       "highlightUrlIdentifier": true,
       "styles": {
-        "badgeColor": "#181717",
-        "iconScale": 1.22
+        "badgeColor": "#111111",
+        "iconScale": 1.14
       }
     },
     {
-      "id": "website",
-      "url": "https://example.com",
-      "provider": "Website",
-      "category": "work",
+      "id": "tiktok-hu",
+      "url": "https://www.tiktok.com/@kereszteszsolti",
+      "provider": "TikTok",
+      "providerExtra": "HU",
+      "category": "watch",
       "tags": [
-        "portfolio",
-        "website"
+        "hungarian",
+        "social-media",
+        "video-platform"
       ],
-      "title": "example.com",
-      "description": "Portfolio home for case studies, services, and selected client work.",
-      "icon": "website",
-      "profileId": "example.com",
-      "styles": {
-        "badgeColor": "#3d2a21",
-        "iconScale": 1.24
-      }
-    },
-    {
-      "id": "instagram",
-      "url": "https://www.instagram.com/your-user-id",
-      "provider": "Instagram",
-      "category": "social",
-      "tags": [
-        "social-media"
-      ],
-      "title": "@your-user-id",
-      "description": "Behind-the-scenes posts, short updates, and visual snippets.",
-      "icon": "instagram",
-      "profileId": "@your-user-id",
+      "title": "Keresztes Zsolt",
+      "description": "Önfejlesztési és STEM tartalmak magyar nyelven.",
+      "icon": "tiktok",
+      "profileId": "@kereszteszsolti",
       "highlightUrlIdentifier": true,
       "styles": {
-        "badgeColor": "#E4405F",
-        "iconScale": 1.2
+        "badgeColor": "#111111",
+        "iconScale": 1.14
       }
     },
     {
       "id": "x",
-      "url": "https://x.com/your-user-id",
+      "url": "https://x.com/KeresztesZsolti",
       "provider": "X",
       "providerExtra": "Twitter",
       "category": "social",
       "tags": [
         "social-media"
       ],
-      "title": "@your-user-id",
-      "description": "Short thoughts, product notes, and current work-in-progress updates.",
+      "title": "Keresztes Zsolt",
+      "description": "Szakmai profil. STEM, önfejlesztés és projektfrissítések.",
       "icon": "x",
-      "profileId": "@your-user-id",
+      "profileId": "@KeresztesZsolti",
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#111111",
@@ -127,41 +177,211 @@
       }
     },
     {
-      "id": "youtube-en",
-      "url": "https://www.youtube.com/@your-user-id",
-      "provider": "YouTube",
-      "providerExtra": "EN",
-      "category": "watch",
+      "id": "website-en",
+      "url": "https://www.kereszteszsolt.com",
+      "provider": "zsoltkeresztes.com",
+      "category": "work",
       "tags": [
-        "video-platform"
+        "english",
+        "website"
       ],
-      "title": "Your Name Studio",
-      "description": "Talks, walkthrough videos, and practical design or frontend lessons.",
-      "icon": "youtube",
-      "profileId": "@your-user-id",
+      "title": "Személyes weboldal (EN)",
+      "description": "Keresztes Zsolt személyes weboldala angol nyelvű tartalommal.",
+      "icon": "website",
+      "profileId": "kereszteszsolt.com",
       "highlightUrlIdentifier": true,
       "styles": {
-        "badgeColor": "#ff0000",
+        "badgeColor": "#3d2a21",
+        "iconScale": 1.24
+      }
+    },
+    {
+      "id": "website-hu",
+      "url": "https://www.kereszteszsolt.hu",
+      "provider": "kereszteszsolt.hu",
+      "category": "work",
+      "tags": [
+        "hungarian",
+        "website"
+      ],
+      "title": "Személyes weboldal (HU)",
+      "description": "Keresztes Zsolt személyes weboldala magyar nyelvű tartalommal.",
+      "icon": "website",
+      "profileId": "kereszteszsolt.hu",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#3d2a21",
+        "iconScale": 1.24
+      }
+    },
+    {
+      "id": "support",
+      "url": "https://buymeacoffee.com/kereszteszsolt",
+      "provider": "Buy Me A Coffee",
+      "category": "support",
+      "tags": [
+        "support"
+      ],
+      "title": "Támogasd a munkámat",
+      "description": "Támogasd a munkámat, ha értékesnek találod.",
+      "icon": "support",
+      "profileId": "kereszteszsolt",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#ffdd00",
+        "iconScale": 1.12
+      }
+    },
+    {
+      "id": "focus-guard",
+      "url": "https://chromewebstore.google.com/detail/focus-guard/bdfnblnbjckkhknignkpmckeelfplill",
+      "provider": "Focus Guard",
+      "category": "dev",
+      "tags": [
+        "english",
+        "dev"
+      ],
+      "title": "Focus Guard",
+      "description": "Chrome-bővítmény, amely fókuszüzenettel blokkolja a zavaró weboldalakat.",
+      "icon": "/icons/focus-guard-shield.svg",
+      "profileId": "bdfnblnbjckkhknignkpmckeelfplill",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#4b7a63",
+        "badge1Color": "#38584a",
+        "iconScale": 1.22
+      }
+    },
+    {
+      "id": "link-collection-en",
+      "url": "https://zsoltkeresztes.com",
+      "provider": "zsoltkeresztes.com",
+      "category": "links",
+      "tags": [
+        "english",
+        "link-hub"
+      ],
+      "title": "Egyedi linkgyűjtemény (EN)",
+      "description": "Angol nyelvű linkgyűjteményes weboldal.",
+      "icon": "website",
+      "profileId": "zsoltkeresztes.com",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#5b3a29",
         "iconScale": 1
       }
     },
     {
-      "id": "youtube-es",
-      "url": "https://www.youtube.com/@your-user-id-es",
-      "provider": "YouTube",
-      "providerExtra": "ES",
-      "category": "watch",
+      "id": "link-collection-hu",
+      "url": "https://www.zsoltkeresztes.hu",
+      "provider": "zsoltkeresztes.hu",
+      "category": "links",
       "tags": [
-        "video-platform"
+        "hungarian",
+        "link-hub"
       ],
-      "title": "Your Name Studio",
-      "description": "Spanish channel with talks, walkthrough videos, and practical design or frontend lessons.",
-      "icon": "youtube",
-      "profileId": "@your-user-id-es",
+      "title": "Egyedi linkgyűjtemény (HU)",
+      "description": "Magyar nyelvű linkgyűjteményes weboldal.",
+      "icon": "website",
+      "profileId": "zsoltkeresztes.hu",
       "highlightUrlIdentifier": true,
       "styles": {
-        "badgeColor": "#ff0000",
+        "badgeColor": "#5b3a29",
         "iconScale": 1
+      }
+    },
+    {
+      "id": "github",
+      "url": "https://github.com/kereszteszsolt",
+      "provider": "GitHub",
+      "category": "dev",
+      "tags": [
+        "code",
+        "dev"
+      ],
+      "title": "Keresztes Zsolt",
+      "description": "Kódtárolók és projektek.",
+      "icon": "website",
+      "profileId": "kereszteszsolt",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#181717",
+        "iconScale": 1.22
+      }
+    },
+    {
+      "id": "project-collection",
+      "url": "https://kereszteszsolt.net",
+      "provider": "kereszteszsolt.net",
+      "category": "dev",
+      "tags": [
+        "code",
+        "dev",
+        "website"
+      ],
+      "title": "Projektgyűjtemény",
+      "description": "Keresztes Zsolt GitHubon elérhető projektgyűjteménye válogatott projektekkel és előnézetekkel.",
+      "icon": "github",
+      "profileId": "kereszteszsolt.net",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#181717",
+        "iconScale": 1.22
+      }
+    },
+    {
+      "id": "facebook",
+      "url": "https://www.facebook.com/KeresztesZsolt.kzs",
+      "provider": "Facebook",
+      "category": "social",
+      "tags": [
+        "social-media"
+      ],
+      "title": "Keresztes Zsolt",
+      "description": "Szakmai Facebook-oldal. STEM, önfejlesztés és projektfrissítések.",
+      "icon": "facebook",
+      "profileId": "KeresztesZsolt.kzs",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#1877F2",
+        "iconScale": 1.22
+      }
+    },
+    {
+      "id": "instagram",
+      "url": "https://www.instagram.com/kereszteszsolt_kzs",
+      "provider": "Instagram",
+      "category": "social",
+      "tags": [
+        "social-media"
+      ],
+      "title": "Keresztes Zsolt",
+      "description": "Telefonnal készült fotók, növények, bogarak, madarak és más apró pillanatok.",
+      "icon": "instagram",
+      "profileId": "@kereszteszsolt_kzs",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#E4405F",
+        "iconScale": 1.2
+      }
+    },
+    {
+      "id": "linktree",
+      "url": "https://linktr.ee/kereszteszsolt",
+      "provider": "Linktree",
+      "providerExtra": "",
+      "category": "links",
+      "tags": [
+        "link-hub"
+      ],
+      "title": "Linktree összes link",
+      "description": "Linktree linkgyűjtemény.",
+      "icon": "linktree",
+      "profileId": "kereszteszsolt",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#2bb673",
+        "iconScale": 1.18
       }
     }
   ]

@@ -1,22 +1,27 @@
 {
   "id": "license",
-  "buttonLabel": "License",
-  "title": "License",
-  "updatedAtLabel": "License",
+  "buttonLabel": "Licenc",
+  "title": "Licenc",
+  "updatedAtLabel": "Kódlicenc",
   "updatedAt": "Apache License 2.0",
   "sections": [
     {
-      "heading": "Starter license",
+      "heading": "Kód újrafelhasználása",
       "paragraphs": [
-        "This repository includes an Apache License 2.0 file so forks have a clear default software license.",
-        "If you publish a modified version, review whether the bundled license still matches your needs and whether you need additional notices."
+        "A weboldal forráskódja az Apache License 2.0 licenc alatt érhető el.",
+        "Szabadon fork-olhatod, módosíthatod és újra felhasználhatod a kódot saját projektjeidhez, beleértve a linkgyűjtemény vagy profiljellegű alkalmazásokat is, feltéve hogy a használat megfelel a licenc feltételeinek.",
+        "Ha újra felhasználod a kódot, célszerű a benne szereplő adatokat, tartalmakat vagy azonosítókat lecserélni vagy átdolgozni, hogy elkerüld az eredeti projekttel kapcsolatos félreértéseket vagy megtévesztő megjelenítést."
       ]
     }
   ],
   "actions": [
     {
-      "label": "Read Apache 2.0",
-      "href": "https://www.apache.org/licenses/LICENSE-2.0"
+      "label": "GitHub repó megnyitása",
+      "href": "https://github.com/kereszteszsolt/keresztes-zsolt-links-hu"
+    },
+    {
+      "label": "A repó LICENSE fájljának megnyitása",
+      "href": "https://github.com/kereszteszsolt/keresztes-zsolt-links-hu/blob/main/LICENSE"
     }
   ]
 }

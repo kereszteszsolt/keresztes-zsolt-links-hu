@@ -1,28 +1,36 @@
 {
   "id": "contact",
-  "buttonLabel": "Contact",
-  "title": "Contact",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "Kapcsolat",
+  "title": "Kapcsolat",
+  "updatedAtLabel": "Csatornák",
+  "updatedAt": "LinkedIn + e-mail",
   "sections": [
     {
-      "heading": "How to reach Your Name",
+      "heading": "Kapcsolatfelvétel",
       "paragraphs": [
-        "This is example contact copy. Replace it with your preferred contact channel, business response policy, and working hours if relevant.",
-        "For a real deployment, make sure every listed contact method, social account, and support promise matches your actual workflow."
+        "Ehhez a weboldalhoz a LinkedIn az elsődleges kapcsolati csatorna.",
+        "Közvetlen kapcsolatfelvételhez az e-mail-cím is elérhető alább."
       ]
     }
   ],
   "actions": [
     {
-      "label": "Email {{email}}",
+      "label": "E-mail {{email}}",
       "email": true,
-      "emailParts": ["ple.c", "our-u", "om", "id@ex", "y", "ser-", "am"],
-      "emailOrder": [4, 1, 5, 3, 6, 0, 2]
+      "emailParts": [
+        "contact@",
+        "kereszteszsolt",
+        ".com"
+      ],
+      "emailOrder": [
+        0,
+        1,
+        2
+      ]
     },
     {
-      "label": "LinkedIn profile",
-      "href": "https://www.linkedin.com/in/your-user-id"
+      "label": "LinkedIn megnyitása",
+      "href": "https://www.linkedin.com/in/kereszteszsolt"
     }
   ]
 }

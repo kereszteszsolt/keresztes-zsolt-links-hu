@@ -1,16 +1,16 @@
 {
-  "heroCardLabel": "Profile snapshot",
-  "directoryEyebrow": "Link collection",
+  "heroCardLabel": "Áttekintés",
+  "directoryEyebrow": "Linkek",
   "directoryTitle": "",
-  "directoryViewModeAriaLabel": "Directory presentation mode",
-  "directoryFilterAriaLabel": "Filter links by section",
-  "embedEmptyState": "No links match the current embed query.",
+  "directoryViewModeAriaLabel": "Nézetmód",
+  "directoryFilterAriaLabel": "Linkszűrők",
+  "embedEmptyState": "Az aktuális címkeszűrőnek megfelelő link nem található.",
   "viewModes": {
-    "list": "List",
-    "badges": "Badges"
+    "list": "Lista",
+    "badges": "Jelvények"
   },
-  "featuredLabel": "Featured",
-  "footerNavigationLabel": "Legal and contact information",
-  "footerModalCloseLabel": "Close",
-  "footerCopyright": "Copyright {{year}} Your Name. Replace the example links, contact details, and legal copy before publishing."
+  "featuredLabel": "kiemelt",
+  "footerNavigationLabel": "Lábléc navigáció",
+  "footerModalCloseLabel": "Bezárás",
+  "footerCopyright": "Copyright © {{year}} Keresztes Zsolt. Minden jog fenntartva."
 }

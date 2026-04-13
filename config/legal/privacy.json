@@ -1,22 +1,36 @@
 {
   "id": "privacy",
-  "buttonLabel": "Privacy",
-  "title": "Privacy Policy",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "Adatvédelem",
+  "title": "Adatkezelési tájékoztató",
+  "updatedAtLabel": "Utolsó frissítés",
+  "updatedAt": "2026-04-08",
   "sections": [
     {
-      "heading": "Data handling",
+      "heading": "Mit csinál ez a weboldal",
       "paragraphs": [
-        "This example site is primarily a static page with external links. Replace this placeholder with your real policy covering analytics, contact forms, third-party embeds, and hosting details.",
-        "If you use cookies, analytics, or email collection, explain what data is processed, why it is processed, and how users can contact you about their rights."
+        "Ez a weboldal egy nagyrészt statikus linkgyűjtemény és információs felület.",
+        "Nem kínál felhasználói fiókokat, közvetlen fizetéseket vagy beépített üzenetküldő űrlapokat."
       ]
     },
     {
-      "heading": "Third-party platforms",
+      "heading": "Adatkezelés",
       "paragraphs": [
-        "Most profile-link sites route visitors to external platforms such as LinkedIn, GitHub, Instagram, or YouTube.",
-        "Document those third-party destinations and link to their policies where appropriate."
+        "A jelenlegi megvalósítás alapján ez a weboldal nem gyűjt vagy tárol aktívan személyes adatokat egyedi analitikán, felhasználói fiókokon vagy beküldési űrlapokon keresztül.",
+        "Ugyanakkor alapvető technikai adatokhoz, például IP-címekhez vagy kérésnaplókhoz a hosztingszolgáltató vagy a platform infrastruktúrája hozzáférhet a szolgáltatás működtetése és védelme érdekében."
+      ]
+    },
+    {
+      "heading": "Harmadik felek céloldalai",
+      "paragraphs": [
+        "Amikor külső hivatkozást nyitsz meg, elhagyod ezt a weboldalt, és harmadik felek szolgáltatásaival lépsz kapcsolatba, például közösségi hálózatokkal, kódtárszolgáltatókkal vagy fizetési szolgáltatókkal.",
+        "Ezek a szolgáltatások a saját adatvédelmi szabályzataik és feltételeik szerint működnek, és az adatokat tőlünk függetlenül gyűjthetik és kezelhetik."
+      ]
+    },
+    {
+      "heading": "Kapcsolat és változások",
+      "paragraphs": [
+        "Ha adatvédelemmel kapcsolatos kérdésed van, a láblécben megadott elérhetőségeken keresztül kapcsolatba léphetsz a weboldal tulajdonosával.",
+        "Ez a tájékoztató frissülhet, ha a weboldal új funkciókat vezet be, például analitikát, űrlapokat vagy más adatkezelési megoldásokat."
       ]
     }
   ]

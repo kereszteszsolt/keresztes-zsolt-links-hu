@@ -1,31 +1,43 @@
 {
   "id": "impressum",
-  "buttonLabel": "Impressum",
-  "title": "Impressum",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "Impresszum",
+  "title": "Impresszum",
+  "updatedAtLabel": "Utolsó frissítés",
+  "updatedAt": "2026-04-09",
   "sections": [
     {
-      "heading": "Publisher information",
+      "heading": "Üzemeltető",
       "paragraphs": [
-        "Your Name",
-        "123 Example Street, Example City, NY 10001",
-        "This is placeholder publisher information. Replace it with the details required in your jurisdiction."
+        "A weboldalért felelős: Keresztes Zsolt.",
+        "Ez egy egyéni fejlesztő személyes weboldala, természetes személyként, nem cégként.",
+        "Weboldal: zsoltkeresztes.hu."
       ]
     },
     {
-      "heading": "Responsibility for content",
+      "heading": "Kapcsolat",
       "paragraphs": [
-        "If you need an impressum, update this section to reflect your legal identity, ownership details, and the party responsible for the published content."
+        "A LinkedIn- és e-mailes kapcsolatfelvételi lehetőségek alább érhetők el."
       ]
     }
   ],
   "actions": [
     {
-      "label": "Email {{email}}",
+      "label": "E-mail {{email}}",
       "email": true,
-      "emailParts": ["ple.c", "our-u", "om", "id@ex", "y", "ser-", "am"],
-      "emailOrder": [4, 1, 5, 3, 6, 0, 2]
+      "emailParts": [
+        "contact@",
+        "kereszteszsolt",
+        ".com"
+      ],
+      "emailOrder": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "label": "LinkedIn megnyitása",
+      "href": "https://www.linkedin.com/in/kereszteszsolt"
     }
   ]
 }

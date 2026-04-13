@@ -1,22 +1,44 @@
 {
   "id": "gtc",
-  "buttonLabel": "GTC",
-  "title": "General Terms and Conditions",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "ÁSZF",
+  "title": "Általános szerződési feltételek",
+  "updatedAtLabel": "Utolsó frissítés",
+  "updatedAt": "2026-04-09",
   "sections": [
     {
-      "heading": "Example use only",
+      "heading": "Hatály",
       "paragraphs": [
-        "This starter ships with placeholder terms so the site structure is complete, but the copy is not legal advice.",
-        "Before publishing, replace this example text with terms that match your services, jurisdiction, refund rules, and delivery process."
+        "Ez a weboldal nyilvános információkat, profilhivatkozásokat és a weboldal tulajdonosához, valamint a felsorolt projektekhez kapcsolódó beágyazott felületeket tesz elérhetővé.",
+        "A weboldal használatával elfogadod, hogy azt jogszerűen használod, és nem károsítod, zavarod meg vagy használod visszaélésszerűen sem a weboldalt, sem a hozzá kapcsolódó erőforrásokat."
       ]
     },
     {
-      "heading": "Scope of services",
+      "heading": "Tartalom és elérhetőség",
       "paragraphs": [
-        "Use this section to describe what you offer, how engagements start, and what is outside your delivery scope.",
-        "If you sell products or services, define fulfillment expectations, payment rules, and cancellation terms clearly."
+        "A tartalom \"jelen formájában\" érhető el, és előzetes értesítés nélkül bármikor frissülhet, eltávolítható vagy átrendezhető.",
+        "A külső hivatkozások olyan harmadik felek szolgáltatásaira vezethetnek, amelyek a saját feltételeik és szabályzataik szerint működnek."
+      ]
+    },
+    {
+      "heading": "Szellemi tulajdon",
+      "paragraphs": [
+        "Eltérő jelzés hiányában a márkaelemek, az elrendezés, a szöveges tartalom és a weboldal eredeti anyagai a weboldal tulajdonosának tulajdonát képezik.",
+        "Nyilvános oldalakat hivatkozhatsz vagy megoszthatsz, de jelentős eredeti tartalmat nem közölhetsz újra félrevezető módon, és engedély nélkül nem sugallhatsz jóváhagyást vagy támogatottságot."
+      ]
+    },
+    {
+      "heading": "Felelősség kizárása",
+      "paragraphs": [
+        "A weboldal harmadik féltől származó könyvtárakat, függőségeket és szolgáltatásokat is használ, beleértve a nyílt forráskódú összetevőket. Ezek kiválasztása és használata jóhiszeműen, kellő gondossággal történik, ugyanakkor nem garantálható, hogy minden összetevő mindenkor mentes hibáktól, sérülékenységektől vagy biztonsági problémáktól. Egyes problémák csak később válhatnak ismertté.",
+        "A weboldal tulajdonosa ésszerű erőfeszítéseket tesz azért, hogy a weboldal pontos, elérhető és biztonságos legyen, de nem garantálja, hogy az információ teljes, pontos, folyamatosan hozzáférhető, illetve hibáktól vagy biztonsági sérülékenységektől mentes.",
+        "A weboldal használata a saját felelősségedre történik.",
+        "A weboldal tulajdonosa nem felel a weboldal használatából vagy használhatatlanságából, illetve a harmadik fél szolgáltatásaira, könyvtáraira vagy tartalmaira való hagyatkozásból eredő közvetlen vagy közvetett károkért."
+      ]
+    },
+    {
+      "heading": "A feltételek módosítása",
+      "paragraphs": [
+        "Ezek a feltételek előzetes értesítés nélkül bármikor frissíthetők vagy módosíthatók. A weboldal további használata a frissített feltételek elfogadásának minősül."
       ]
     }
   ]
