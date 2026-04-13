@@ -192,7 +192,7 @@
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#3d2a21",
-        "iconScale": 1.24
+        "iconScale": 1.22
       }
     },
     {
@@ -211,7 +211,7 @@
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#3d2a21",
-        "iconScale": 1.24
+        "iconScale": 1.22
       }
     },
     {
@@ -249,7 +249,7 @@
       "styles": {
         "badgeColor": "#4b7a63",
         "badge1Color": "#38584a",
-        "iconScale": 1.22
+        "iconScale": 1.28
       }
     },
     {
@@ -268,7 +268,7 @@
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#5b3a29",
-        "iconScale": 1
+        "iconScale": 1.22
       }
     },
     {
@@ -287,7 +287,7 @@
       "highlightUrlIdentifier": true,
       "styles": {
         "badgeColor": "#5b3a29",
-        "iconScale": 1
+        "iconScale": 1.22
       }
     },
     {
@@ -301,7 +301,7 @@
       ],
       "title": "Keresztes Zsolt",
       "description": "Kódtárolók és projektek.",
-      "icon": "website",
+      "icon": "github",
       "profileId": "kereszteszsolt",
       "highlightUrlIdentifier": true,
       "styles": {
@@ -321,7 +321,7 @@
       ],
       "title": "Projektgyűjtemény",
       "description": "Keresztes Zsolt GitHubon elérhető projektgyűjteménye válogatott projektekkel és előnézetekkel.",
-      "icon": "github",
+      "icon": "website",
       "profileId": "kereszteszsolt.net",
       "highlightUrlIdentifier": true,
       "styles": {
