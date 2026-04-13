@@ -6,35 +6,35 @@
       "type": "all"
     },
     {
-      "id": "work",
-      "label": "Munka",
-      "type": "category",
-      "categories": [
-        "work"
-      ]
-    },
-    {
-      "id": "social",
-      "label": "Közösségi média",
-      "type": "category",
-      "categories": [
-        "social"
-      ]
-    },
-    {
-      "id": "watch",
-      "label": "Videóplatform",
-      "type": "category",
-      "categories": [
-        "watch"
-      ]
-    },
-    {
       "id": "dev",
       "label": "Fejlesztés",
       "type": "category",
       "categories": [
         "dev"
+      ]
+    },
+    {
+      "id": "video-platform",
+      "label": "Videóplatform",
+      "type": "category",
+      "categories": [
+        "video-platform"
+      ]
+    },
+    {
+      "id": "social-media",
+      "label": "Közösségi média",
+      "type": "category",
+      "categories": [
+        "social-media"
+      ]
+    },
+    {
+      "id": "personal-websites",
+      "label": "Személyes weboldalak",
+      "type": "category",
+      "categories": [
+        "personal-websites"
       ]
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "id": "links",
-      "label": "Linkgyűjtők",
+      "label": "Linkgyűjtemény",
       "type": "category",
       "categories": [
         "links"
@@ -60,7 +60,7 @@
       "url": "https://www.youtube.com/@KeresztesZsolti",
       "provider": "YouTube",
       "providerExtra": "EN",
-      "category": "watch",
+      "category": "video-platform",
       "tags": [
         "english",
         "video-platform"
@@ -80,7 +80,7 @@
       "url": "https://www.youtube.com/@KeresztesZsolt",
       "provider": "YouTube",
       "providerExtra": "HU",
-      "category": "watch",
+      "category": "video-platform",
       "tags": [
         "hungarian",
         "video-platform"
@@ -99,7 +99,7 @@
       "id": "linkedin",
       "url": "https://www.linkedin.com/in/kereszteszsolt",
       "provider": "LinkedIn",
-      "category": "work",
+      "category": "social-media",
       "tags": [
         "professional",
         "social-media"
@@ -120,7 +120,7 @@
       "url": "https://www.tiktok.com/@kereszteszsoltie",
       "provider": "TikTok",
       "providerExtra": "EN",
-      "category": "watch",
+      "category": "video-platform",
       "tags": [
         "english",
         "social-media",
@@ -141,7 +141,7 @@
       "url": "https://www.tiktok.com/@kereszteszsolti",
       "provider": "TikTok",
       "providerExtra": "HU",
-      "category": "watch",
+      "category": "video-platform",
       "tags": [
         "hungarian",
         "social-media",
@@ -162,7 +162,7 @@
       "url": "https://x.com/KeresztesZsolti",
       "provider": "X",
       "providerExtra": "Twitter",
-      "category": "social",
+      "category": "social-media",
       "tags": [
         "social-media"
       ],
@@ -180,7 +180,7 @@
       "id": "website-en",
       "url": "https://www.kereszteszsolt.com",
       "provider": "zsoltkeresztes.com",
-      "category": "work",
+      "category": "personal-websites",
       "tags": [
         "english",
         "website"
@@ -199,7 +199,7 @@
       "id": "website-hu",
       "url": "https://www.kereszteszsolt.hu",
       "provider": "kereszteszsolt.hu",
-      "category": "work",
+      "category": "personal-websites",
       "tags": [
         "hungarian",
         "website"
@@ -330,10 +330,30 @@
       }
     },
     {
+      "id": "project-collection-links",
+      "url": "https://kereszteszsolt.net",
+      "provider": "kereszteszsolt.net",
+      "category": "links",
+      "tags": [
+        "code",
+        "link-hub",
+        "website"
+      ],
+      "title": "Projektgyűjtemény",
+      "description": "Keresztes Zsolt GitHubon elérhető projektgyűjteménye válogatott projektekkel és előnézetekkel.",
+      "icon": "affiliate",
+      "profileId": "kereszteszsolt.net",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#181717",
+        "iconScale": 1.22
+      }
+    },
+    {
       "id": "facebook",
       "url": "https://www.facebook.com/KeresztesZsolt.kzs",
       "provider": "Facebook",
-      "category": "social",
+      "category": "social-media",
       "tags": [
         "social-media"
       ],
@@ -351,7 +371,7 @@
       "id": "instagram",
       "url": "https://www.instagram.com/kereszteszsolt_kzs",
       "provider": "Instagram",
-      "category": "social",
+      "category": "social-media",
       "tags": [
         "social-media"
       ],

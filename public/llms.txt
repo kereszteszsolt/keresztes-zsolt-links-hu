@@ -39,15 +39,15 @@ Category: Linkgyűjtemény
 - TikTok (EN): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsoltie
 - TikTok (HU): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsolti
 
-### Munka
-- LinkedIn: Keresztes Zsolt - https://www.linkedin.com/in/kereszteszsolt
-- zsoltkeresztes.com: Személyes weboldal (EN) - https://www.kereszteszsolt.com
-- kereszteszsolt.hu: Személyes weboldal (HU) - https://www.kereszteszsolt.hu
-
 ### Közösségi média
+- LinkedIn: Keresztes Zsolt - https://www.linkedin.com/in/kereszteszsolt
 - X (Twitter): Keresztes Zsolt - https://x.com/KeresztesZsolti
 - Facebook: Keresztes Zsolt - https://www.facebook.com/KeresztesZsolt.kzs
 - Instagram: Keresztes Zsolt - https://www.instagram.com/kereszteszsolt_kzs
+
+### Személyes weboldalak
+- zsoltkeresztes.com: Személyes weboldal (EN) - https://www.kereszteszsolt.com
+- kereszteszsolt.hu: Személyes weboldal (HU) - https://www.kereszteszsolt.hu
 
 ### Támogatás
 - Buy Me A Coffee: Támogasd a munkámat - https://buymeacoffee.com/kereszteszsolt
@@ -57,9 +57,10 @@ Category: Linkgyűjtemény
 - GitHub: Keresztes Zsolt - https://github.com/kereszteszsolt
 - kereszteszsolt.net: Projektgyűjtemény - https://kereszteszsolt.net
 
-### Linkgyűjtők
+### Linkgyűjtemény
 - zsoltkeresztes.com: Egyedi linkgyűjtemény (EN) - https://zsoltkeresztes.com
 - zsoltkeresztes.hu: Egyedi linkgyűjtemény (HU) - https://www.zsoltkeresztes.hu
+- kereszteszsolt.net: Projektgyűjtemény - https://kereszteszsolt.net
 - Linktree: Linktree összes link - https://linktr.ee/kereszteszsolt
 
 ## A linkgyűjteményről
