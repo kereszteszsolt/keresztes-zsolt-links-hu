@@ -187,7 +187,7 @@
       ],
       "title": "Személyes weboldal (EN)",
       "description": "Keresztes Zsolt személyes weboldala angol nyelvű tartalommal.",
-      "icon": "website",
+      "icon": "affiliate",
       "profileId": "kereszteszsolt.com",
       "highlightUrlIdentifier": true,
       "styles": {
@@ -263,7 +263,7 @@
       ],
       "title": "Egyedi linkgyűjtemény (EN)",
       "description": "Angol nyelvű linkgyűjteményes weboldal.",
-      "icon": "website",
+      "icon": "affiliate",
       "profileId": "zsoltkeresztes.com",
       "highlightUrlIdentifier": true,
       "styles": {
@@ -282,7 +282,7 @@
       ],
       "title": "Egyedi linkgyűjtemény (HU)",
       "description": "Magyar nyelvű linkgyűjteményes weboldal.",
-      "icon": "website",
+      "icon": "affiliate",
       "profileId": "zsoltkeresztes.hu",
       "highlightUrlIdentifier": true,
       "styles": {
@@ -321,7 +321,7 @@
       ],
       "title": "Projektgyűjtemény",
       "description": "Keresztes Zsolt GitHubon elérhető projektgyűjteménye válogatott projektekkel és előnézetekkel.",
-      "icon": "website",
+      "icon": "affiliate",
       "profileId": "kereszteszsolt.net",
       "highlightUrlIdentifier": true,
       "styles": {
