@@ -17,16 +17,8 @@
     {
       "label": "E-mail {{email}}",
       "email": true,
-      "emailParts": [
-        "kapcsolat@",
-        "kereszteszsolt",
-        ".hu"
-      ],
-      "emailOrder": [
-        0,
-        1,
-        2
-      ]
+      "emailParts": ["kapcsolat@", "kereszteszsolt", ".hu"],
+      "emailOrder": [0, 1, 2]
     },
     {
       "label": "LinkedIn megnyitása",

@@ -9,14 +9,14 @@
       "heading": "Üzemeltető",
       "paragraphs": [
         "A weboldalért felelős: Keresztes Zsolt.",
-        "Ez egy egyéni fejlesztő személyes weboldala, természetes személyként, nem cégként.",
+        "Ez egy egyéni fejlesztő személyes weboldala, természetes személyként, nem gazdasági társaságként.",
         "Weboldal: zsoltkeresztes.hu."
       ]
     },
     {
       "heading": "Kapcsolat",
       "paragraphs": [
-        "A LinkedIn- és e-mailes kapcsolatfelvételi lehetőségek alább érhetők el."
+        "LinkedIn- és e-mailes kapcsolatfelvételi lehetőségek alább érhetők el."
       ]
     }
   ],
@@ -24,16 +24,8 @@
     {
       "label": "E-mail {{email}}",
       "email": true,
-      "emailParts": [
-        "kapcsolat@",
-        "kereszteszsolt",
-        ".hu"
-      ],
-      "emailOrder": [
-        0,
-        1,
-        2
-      ]
+      "emailParts": ["kapcsolat@", "kereszteszsolt", ".hu"],
+      "emailOrder": [0, 1, 2]
     },
     {
       "label": "LinkedIn megnyitása",

@@ -8,37 +8,40 @@
     {
       "heading": "Hatály",
       "paragraphs": [
-        "Ez a weboldal nyilvános információkat, profilhivatkozásokat és a weboldal tulajdonosához, valamint a felsorolt projektekhez kapcsolódó beágyazott felületeket tesz elérhetővé.",
-        "A weboldal használatával elfogadod, hogy azt jogszerűen használod, és nem károsítod, zavarod meg vagy használod visszaélésszerűen sem a weboldalt, sem a hozzá kapcsolódó erőforrásokat."
+        "Ez a weboldal nyilvános információkat, profilhivatkozásokat és a weboldal tulajdonosához, valamint a felsorolt projektekhez kapcsolódó beágyazott tartalmakat kínál.",
+        "A weboldal használatával elfogadod, hogy azt kizárólag jogszerűen használod.",
+        "Tilos a weboldalt vagy a hozzá kapcsolódó erőforrásokat károsítani, megzavarni vagy visszaélésszerűen igénybe venni."
       ]
     },
     {
       "heading": "Tartalom és elérhetőség",
       "paragraphs": [
         "A tartalom \"jelen formájában\" érhető el, és előzetes értesítés nélkül bármikor frissülhet, eltávolítható vagy átrendezhető.",
-        "A külső hivatkozások olyan harmadik felek szolgáltatásaira vezethetnek, amelyek a saját feltételeik és szabályzataik szerint működnek."
+        "A külső hivatkozások olyan harmadik felek szolgáltatásaira mutatnak, amelyek a saját feltételeik és szabályzataik szerint működnek."
       ]
     },
     {
       "heading": "Szellemi tulajdon",
       "paragraphs": [
-        "Eltérő jelzés hiányában a márkaelemek, az elrendezés, a szöveges tartalom és a weboldal eredeti anyagai a weboldal tulajdonosának tulajdonát képezik.",
-        "Nyilvános oldalakat hivatkozhatsz vagy megoszthatsz, de jelentős eredeti tartalmat nem közölhetsz újra félrevezető módon, és engedély nélkül nem sugallhatsz jóváhagyást vagy támogatottságot."
+        "Eltérő jelzés hiányában a márkaelemek, az elrendezés, a szöveges tartalom és a weboldal egyéb eredeti anyagai a weboldal tulajdonosának szellemi tulajdonát képezik.",
+        "Nyilvános oldalakat hivatkozhatsz vagy megoszthatsz, de eredeti tartalmat nem közölhetsz újra félrevezető módon, és engedély nélkül nem kelthetsz olyan benyomást, mintha a tartalom jóváhagyott vagy támogatott lenne."
       ]
     },
     {
       "heading": "Felelősség kizárása",
       "paragraphs": [
-        "A weboldal harmadik féltől származó könyvtárakat, függőségeket és szolgáltatásokat is használ, beleértve a nyílt forráskódú összetevőket. Ezek kiválasztása és használata jóhiszeműen, kellő gondossággal történik, ugyanakkor nem garantálható, hogy minden összetevő mindenkor mentes hibáktól, sérülékenységektől vagy biztonsági problémáktól. Egyes problémák csak később válhatnak ismertté.",
-        "A weboldal tulajdonosa ésszerű erőfeszítéseket tesz azért, hogy a weboldal pontos, elérhető és biztonságos legyen, de nem garantálja, hogy az információ teljes, pontos, folyamatosan hozzáférhető, illetve hibáktól vagy biztonsági sérülékenységektől mentes.",
+        "A weboldal harmadik féltől származó könyvtárakat, függőségeket és szolgáltatásokat is használ, beleértve a nyílt forráskódú összetevőket.",
+        "Ezek kiválasztása és használata jóhiszeműen, kellő gondossággal történik. Ugyanakkor nem garantálható, hogy minden összetevő mindenkor mentes hibáktól, sérülékenységektől vagy biztonsági problémáktól — egyes hiányosságok csak később válhatnak ismertté.",
+        "A weboldal tulajdonosa ésszerű erőfeszítéseket tesz azért, hogy a weboldal pontos, elérhető és biztonságos legyen. Ennek ellenére nem garantálja, hogy a tartalom teljes, hibátlan, folyamatosan hozzáférhető vagy biztonsági sérülékenységektől mentes.",
         "A weboldal használata a saját felelősségedre történik.",
-        "A weboldal tulajdonosa nem felel a weboldal használatából vagy használhatatlanságából, illetve a harmadik fél szolgáltatásaira, könyvtáraira vagy tartalmaira való hagyatkozásból eredő közvetlen vagy közvetett károkért."
+        "A weboldal tulajdonosa nem felel a weboldal használatából vagy elérhetetlenségéből, illetve harmadik felek szolgáltatásaira, könyvtáraira vagy tartalmaira való hagyatkozásból eredő közvetlen vagy közvetett károkért."
       ]
     },
     {
       "heading": "A feltételek módosítása",
       "paragraphs": [
-        "Ezek a feltételek előzetes értesítés nélkül bármikor frissíthetők vagy módosíthatók. A weboldal további használata a frissített feltételek elfogadásának minősül."
+        "Ezek a feltételek előzetes értesítés nélkül bármikor módosíthatók.",
+        "A weboldal további használata a módosított feltételek elfogadásának minősül."
       ]
     }
   ]

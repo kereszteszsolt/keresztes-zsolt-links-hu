@@ -9,16 +9,16 @@
       "heading": "Licenc és újrafelhasználás",
       "paragraphs": [
         "A weboldal forráskódja az Apache License 2.0 licenc alatt érhető el.",
-        "A kód a licenc feltételei szerint újra felhasználható, de ez a repó egy konkrét oldal megvalósítása, nem pedig az ajánlott alap új projektekhez.",
-        "Ha ebből a repóból nézel megoldásokat vagy használsz fel kódrészleteket, célszerű a benne szereplő adatokat, tartalmakat és azonosítókat lecserélni vagy átdolgozni, hogy elkerüld az eredeti projekttel kapcsolatos félreértéseket vagy megtévesztő megjelenítést."
+        "A kód a licenc feltételei szerint újra felhasználható, de ez a repó egy konkrét oldal megvalósítása — nem ajánlott alap új projektekhez.",
+        "Ha ebből a repóból nézel megoldásokat vagy használsz fel kódrészleteket, cseréld le vagy dolgozd át a benne szereplő adatokat, tartalmakat és azonosítókat, hogy elkerüld az eredeti projekttel való összetévesztést vagy félrevezető megjelenítést."
       ]
     },
     {
       "heading": "Ajánlott kiindulópont",
       "paragraphs": [
-        "Ha saját linkgyűjteményt vagy profiljellegű weboldalt szeretnél készíteni, akkor ehhez az ingyenes Profile Links Starter sablon repót érdemes fork-olni vagy sablonként használni.",
-        "A legtöbb esetben nem ezt a jelenlegi oldalrepót érdemes közvetlenül fork-olni, mert a sablon repó kifejezetten tiszta testreszabásra és újrahasznosításra készült.",
-        "Ez a repó inkább egy valós példaprojektként hasznos, míg a saját változatodhoz a sablon repó az ajánlott alap."
+        "Ha saját linkgyűjteményt vagy profiljellegű weboldalt szeretnél készíteni, a Profile Links Starter sablon repót érdemes fork-olni vagy sablonként használni.",
+        "A legtöbb esetben nem ezt az oldalrepót érdemes közvetlenül fork-olni: a sablon repó kifejezetten tiszta testreszabásra és újrahasznosításra készült.",
+        "Ez a repó inkább valós példaprojektként hasznos. A saját változatodhoz a sablon repó az ajánlott kiindulópont."
       ]
     }
   ],
