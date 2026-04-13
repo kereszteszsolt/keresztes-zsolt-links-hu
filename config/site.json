@@ -1,0 +1,71 @@
+{
+  "siteName": "Your Name Links",
+  "siteTitle": "Your Name | Profile Links",
+  "siteDescription": "A simple profile links starter built with Nuxt, config-driven content, and static-friendly SEO defaults.",
+  "siteUrl": "https://example.com",
+  "language": {
+    "code": "en",
+    "locale": "en_US",
+    "name": "English",
+    "direction": "ltr"
+  },
+  "themeColor": "#f4efe7",
+  "author": "Your Name",
+  "canonicalPath": "/",
+  "socialPreview": {
+    "mode": "avatar",
+    "src": "",
+    "alt": "Illustrated placeholder portrait for Your Name"
+  },
+  "announcement": {
+    "enabled": true,
+    "id": "template-placeholder-data",
+    "tone": "warning",
+    "sticky": false,
+    "dismissible": true,
+    "eyebrow": "Template notice",
+    "title": "Placeholder example data",
+    "message": "This starter uses fictional example personas and placeholder profile links. The names, accounts, and contact details shown here are not connected to any real person or official profile.",
+    "closeLabel": "Dismiss notice"
+  },
+  "discovery": {
+    "keywords": [
+      "Your Name",
+      "profile links",
+      "link in bio starter",
+      "Nuxt profile page",
+      "personal website starter"
+    ],
+    "category": "Personal Website",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "includeLlmsTxtInSitemap": true,
+    "llmSummary": "Your Name is fictional placeholder data included in this starter. The site collects example social, portfolio, and contact links in one clear profile page.",
+    "audiences": [
+      "recruiters",
+      "collaborators",
+      "clients"
+    ],
+    "intents": [
+      "find official profile links",
+      "verify social accounts",
+      "discover work and contact options"
+    ],
+    "faq": [
+      {
+        "question": "Who is \"Your Name\"?",
+        "answer": "\"Your Name\" is placeholder data used to show how the starter works before you replace the content with your own profile."
+      },
+      {
+        "question": "What is this site for?",
+        "answer": "It is a clean single-page link hub for social profiles, portfolio destinations, and contact information."
+      },
+      {
+        "question": "How do I customize it?",
+        "answer": "Edit the JSON files in the config folder, replace the example legal text, and deploy the generated site to GitHub Pages or your own domain."
+      }
+    ]
+  },
+  "deploy": {
+    "cname": ""
+  }
+}

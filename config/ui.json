@@ -1,0 +1,16 @@
+{
+  "heroCardLabel": "Profile snapshot",
+  "directoryEyebrow": "Link collection",
+  "directoryTitle": "",
+  "directoryViewModeAriaLabel": "Directory presentation mode",
+  "directoryFilterAriaLabel": "Filter links by section",
+  "embedEmptyState": "No links match the current embed query.",
+  "viewModes": {
+    "list": "List",
+    "badges": "Badges"
+  },
+  "featuredLabel": "Featured",
+  "footerNavigationLabel": "Legal and contact information",
+  "footerModalCloseLabel": "Close",
+  "footerCopyright": "Copyright {{year}} Your Name. Replace the example links, contact details, and legal copy before publishing."
+}

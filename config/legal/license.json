@@ -1,0 +1,22 @@
+{
+  "id": "license",
+  "buttonLabel": "License",
+  "title": "License",
+  "updatedAtLabel": "License",
+  "updatedAt": "Apache License 2.0",
+  "sections": [
+    {
+      "heading": "Starter license",
+      "paragraphs": [
+        "This repository includes an Apache License 2.0 file so forks have a clear default software license.",
+        "If you publish a modified version, review whether the bundled license still matches your needs and whether you need additional notices."
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": "Read Apache 2.0",
+      "href": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
+}

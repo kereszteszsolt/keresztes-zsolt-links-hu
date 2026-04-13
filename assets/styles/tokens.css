@@ -1,0 +1,89 @@
+/*
+ * Profile Link Starter - tokens.css
+ * Defines the shared design tokens for the starter's visual system.
+ *
+ * Copyright 2026 Keresztes Zsolt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Color tokens */
+  --color-bg: #f4efe7;
+  --color-bg-accent: #e2d4bf;
+  --color-panel: rgba(255, 250, 241, 0.76);
+  --color-panel-strong: rgba(255, 248, 236, 0.9);
+  --color-surface: #fffaf1;
+  --color-surface-soft: rgba(255, 255, 255, 0.74);
+  --color-surface-strong: rgba(255, 252, 247, 0.96);
+  --color-text: #241712;
+  --color-muted: #72594d;
+  --color-line-soft: rgba(54, 30, 18, 0.08);
+  --color-line: rgba(54, 30, 18, 0.12);
+  --color-line-strong: rgba(54, 30, 18, 0.2);
+  --color-accent: #ba5c3d;
+  --color-accent-strong: #8f3f26;
+  --color-accent-soft: rgba(186, 92, 61, 0.12);
+  --color-scrollbar-track: rgba(226, 212, 191, 0.68);
+  --color-scrollbar-thumb: rgba(143, 63, 38, 0.68);
+  --color-scrollbar-thumb-hover: rgba(143, 63, 38, 0.86);
+  --color-overlay: rgba(36, 23, 18, 0.55);
+  --color-tooltip: rgba(28, 20, 16, 0.96);
+  --color-icon-surface: var(--color-accent-strong);
+  --color-icon-mark: #fff;
+
+  /* Typography tokens */
+  --font-display: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  /* Radius tokens */
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 16px;
+  --radius-xs: 10px;
+  --radius-pill: 999px;
+
+  /* Shadow tokens */
+  --shadow-panel: 0 24px 70px rgba(75, 43, 29, 0.14), 0 6px 20px rgba(75, 43, 29, 0.05);
+  --shadow-item: 0 16px 34px rgba(75, 43, 29, 0.12), 0 2px 8px rgba(75, 43, 29, 0.05);
+  --shadow-floating: 0 18px 36px rgba(20, 13, 10, 0.24);
+  --shadow-overlay: 0 28px 80px rgba(36, 23, 18, 0.28);
+
+  /* Motion and layout tokens */
+  --transition-fast: 0.18s ease;
+  --blur-panel: 18px;
+  --blur-overlay: 8px;
+  --control-height-sm: 2rem;
+  --control-height-md: 2.5rem;
+  --control-height-lg: 2.75rem;
+  --badge-grid-gap: 0.5rem;
+
+  /* Backwards-compatible aliases used across the current UI */
+  --bg: var(--color-bg);
+  --bg-strong: var(--color-bg-accent);
+  --panel: var(--color-panel);
+  --panel-strong: var(--color-panel-strong);
+  --text: var(--color-text);
+  --muted: var(--color-muted);
+  --line: var(--color-line);
+  --shadow: var(--shadow-panel);
+  --item-shadow: var(--shadow-item);
+  --accent: var(--color-accent);
+  --accent-strong: var(--color-accent-strong);
+  --accent-soft: var(--color-accent-soft);
+  --icon-square: var(--color-icon-surface);
+  --icon-mark: var(--color-icon-mark);
+}

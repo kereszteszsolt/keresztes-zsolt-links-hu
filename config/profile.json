@@ -1,0 +1,30 @@
+{
+  "name": "Your Name",
+  "domainLabel": "profile-links-starter",
+  "roleLine": [
+    "Product designer, frontend tinkerer ",
+    "and content creator."
+  ],
+  "bioLabel": "Quick overview",
+  "bio": "This example starter shows how to organize one profile links site around editable config files, reusable legal content, and static-friendly SEO defaults.",
+  "avatar": {
+    "mode": "upload",
+    "githubUsername": "",
+    "src": "/images/your-name-avatar.svg",
+    "linkUrl": "https://github.com/your-user-id",
+    "alt": "Illustrated placeholder portrait for Your Name"
+  },
+  "facts": [
+    {
+      "id": "focus",
+      "label": "Focus",
+      "value": "Design systems + frontend"
+    },
+    {
+      "id": "based-in",
+      "label": "Based in",
+      "value": "New York, USA"
+    }
+  ],
+  "sameAs": []
+}

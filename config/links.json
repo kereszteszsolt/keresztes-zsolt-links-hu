@@ -1,0 +1,168 @@
+{
+  "filters": [
+    {
+      "id": "all",
+      "label": "All",
+      "type": "all"
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "type": "category",
+      "categories": [
+        "work"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social",
+      "type": "category",
+      "categories": [
+        "social"
+      ]
+    },
+    {
+      "id": "watch",
+      "label": "Watch",
+      "type": "category",
+      "categories": [
+        "watch"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/in/your-user-id",
+      "provider": "LinkedIn",
+      "category": "work",
+      "tags": [
+        "professional",
+        "social-media"
+      ],
+      "title": "Your Name",
+      "description": "Professional profile, experience highlights, and collaboration background.",
+      "icon": "linkedin",
+      "profileId": "your-user-id",
+      "segmentMark": "2",
+      "featured": true,
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#0a66c2",
+        "iconScale": 1.46
+      }
+    },
+    {
+      "id": "github",
+      "url": "https://github.com/your-user-id",
+      "provider": "GitHub",
+      "category": "work",
+      "tags": [
+        "code",
+        "dev"
+      ],
+      "title": "@your-user-id",
+      "description": "Code samples, experiments, and starter projects.",
+      "icon": "github",
+      "profileId": "@your-user-id",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#181717",
+        "iconScale": 1.22
+      }
+    },
+    {
+      "id": "website",
+      "url": "https://example.com",
+      "provider": "Website",
+      "category": "work",
+      "tags": [
+        "portfolio",
+        "website"
+      ],
+      "title": "example.com",
+      "description": "Portfolio home for case studies, services, and selected client work.",
+      "icon": "website",
+      "profileId": "example.com",
+      "styles": {
+        "badgeColor": "#3d2a21",
+        "iconScale": 1.24
+      }
+    },
+    {
+      "id": "instagram",
+      "url": "https://www.instagram.com/your-user-id",
+      "provider": "Instagram",
+      "category": "social",
+      "tags": [
+        "social-media"
+      ],
+      "title": "@your-user-id",
+      "description": "Behind-the-scenes posts, short updates, and visual snippets.",
+      "icon": "instagram",
+      "profileId": "@your-user-id",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#E4405F",
+        "iconScale": 1.2
+      }
+    },
+    {
+      "id": "x",
+      "url": "https://x.com/your-user-id",
+      "provider": "X",
+      "providerExtra": "Twitter",
+      "category": "social",
+      "tags": [
+        "social-media"
+      ],
+      "title": "@your-user-id",
+      "description": "Short thoughts, product notes, and current work-in-progress updates.",
+      "icon": "x",
+      "profileId": "@your-user-id",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#111111",
+        "iconScale": 2
+      }
+    },
+    {
+      "id": "youtube-en",
+      "url": "https://www.youtube.com/@your-user-id",
+      "provider": "YouTube",
+      "providerExtra": "EN",
+      "category": "watch",
+      "tags": [
+        "video-platform"
+      ],
+      "title": "Your Name Studio",
+      "description": "Talks, walkthrough videos, and practical design or frontend lessons.",
+      "icon": "youtube",
+      "profileId": "@your-user-id",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#ff0000",
+        "iconScale": 1
+      }
+    },
+    {
+      "id": "youtube-es",
+      "url": "https://www.youtube.com/@your-user-id-es",
+      "provider": "YouTube",
+      "providerExtra": "ES",
+      "category": "watch",
+      "tags": [
+        "video-platform"
+      ],
+      "title": "Your Name Studio",
+      "description": "Spanish channel with talks, walkthrough videos, and practical design or frontend lessons.",
+      "icon": "youtube",
+      "profileId": "@your-user-id-es",
+      "highlightUrlIdentifier": true,
+      "styles": {
+        "badgeColor": "#ff0000",
+        "iconScale": 1
+      }
+    }
+  ]
+}

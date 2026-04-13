@@ -1,0 +1,91 @@
+/*
+ * Profile Link Starter - link-badge.css
+ * Styles the badge-style link component and its variants.
+ *
+ * Copyright 2026 Keresztes Zsolt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.link-badge {
+  overflow: visible;
+  position: relative;
+}
+
+.link-badge-left .link-badge-icon.badge-icon-frame {
+  box-sizing: border-box;
+  min-height: 2.42em;
+  min-width: 2.42em;
+  padding: 0.18rem;
+}
+
+.badge-provider-icon-img {
+  transform: scale(calc(var(--icon-scale, 1) * 1.46));
+}
+
+.link-badge-tooltip {
+  background: var(--color-tooltip);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  bottom: calc(100% + 0.7rem);
+  box-shadow: var(--shadow-floating);
+  color: #fffaf4;
+  display: grid;
+  gap: 0.32rem;
+  left: 50%;
+  max-width: min(20rem, calc(100vw - 2rem));
+  min-width: 14rem;
+  opacity: 0;
+  padding: 0.72rem 0.82rem;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%, 0.3rem);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  visibility: hidden;
+  white-space: normal;
+  width: max-content;
+  z-index: 30;
+}
+
+.link-badge-tooltip::after {
+  background: var(--color-tooltip);
+  bottom: -0.34rem;
+  content: "";
+  height: 0.7rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  width: 0.7rem;
+}
+
+.link-badge:hover .link-badge-tooltip,
+:global(.badge-item:focus-visible) .link-badge-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  visibility: visible;
+}
+
+.link-badge-tooltip-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.link-badge-tooltip-copy {
+  color: rgba(255, 244, 235, 0.82);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}

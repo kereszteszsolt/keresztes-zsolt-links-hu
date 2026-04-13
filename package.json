@@ -1,0 +1,25 @@
+{
+  "name": "profile-links-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "node ./scripts/clean-output.mjs",
+    "postinstall": "nuxt prepare",
+    "predev": "node ./scripts/sync-static-seo.mjs",
+    "dev": "nuxt dev",
+    "typecheck": "nuxt typecheck",
+    "prebuild": "node ./scripts/sync-static-seo.mjs",
+    "build": "nuxt build",
+    "pregenerate": "node ./scripts/sync-static-seo.mjs",
+    "generate": "npm run clean && nuxt generate",
+    "preview": "nuxt preview",
+    "deploy": "npm run generate && npx gh-pages -d .output/public --nojekyll"
+  },
+  "dependencies": {
+    "nuxt": "^3.21.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

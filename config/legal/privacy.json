@@ -1,0 +1,23 @@
+{
+  "id": "privacy",
+  "buttonLabel": "Privacy",
+  "title": "Privacy Policy",
+  "updatedAtLabel": "Updated",
+  "updatedAt": "2026-04-10",
+  "sections": [
+    {
+      "heading": "Data handling",
+      "paragraphs": [
+        "This example site is primarily a static page with external links. Replace this placeholder with your real policy covering analytics, contact forms, third-party embeds, and hosting details.",
+        "If you use cookies, analytics, or email collection, explain what data is processed, why it is processed, and how users can contact you about their rights."
+      ]
+    },
+    {
+      "heading": "Third-party platforms",
+      "paragraphs": [
+        "Most profile-link sites route visitors to external platforms such as LinkedIn, GitHub, Instagram, or YouTube.",
+        "Document those third-party destinations and link to their policies where appropriate."
+      ]
+    }
+  ]
+}

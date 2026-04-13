@@ -1,0 +1,23 @@
+{
+  "id": "gtc",
+  "buttonLabel": "GTC",
+  "title": "General Terms and Conditions",
+  "updatedAtLabel": "Updated",
+  "updatedAt": "2026-04-10",
+  "sections": [
+    {
+      "heading": "Example use only",
+      "paragraphs": [
+        "This starter ships with placeholder terms so the site structure is complete, but the copy is not legal advice.",
+        "Before publishing, replace this example text with terms that match your services, jurisdiction, refund rules, and delivery process."
+      ]
+    },
+    {
+      "heading": "Scope of services",
+      "paragraphs": [
+        "Use this section to describe what you offer, how engagements start, and what is outside your delivery scope.",
+        "If you sell products or services, define fulfillment expectations, payment rules, and cancellation terms clearly."
+      ]
+    }
+  ]
+}

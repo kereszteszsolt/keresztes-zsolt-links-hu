@@ -1,0 +1,62 @@
+{
+  "sections": [
+    {
+      "type": "profile",
+      "title": "Profile"
+    },
+    {
+      "type": "profileFacts",
+      "title": "Profile Facts"
+    },
+    {
+      "type": "audiences",
+      "title": "Audiences"
+    },
+    {
+      "type": "intents",
+      "title": "Search Intents"
+    },
+    {
+      "type": "links",
+      "title": "Links By Category",
+      "groupBy": "category"
+    },
+    {
+      "type": "chapter",
+      "title": "About This Starter",
+      "text": "This repository is an upstream starter for profile-link sites. It is designed to be forked, edited through JSON files, and reused with placeholder-safe example data."
+    },
+    {
+      "type": "chapter",
+      "title": "Forking Notes",
+      "body": [
+        {
+          "title": "What to replace",
+          "text": "Update the placeholder identity, links, contact details, legal copy, and images before publishing."
+        },
+        {
+          "title": "Where to edit",
+          "text": "Most forks only need config/site.json, config/profile.json, config/links.json, config/llms.json, config/legal/*.json, and public/images/."
+        }
+      ]
+    },
+    {
+      "type": "qna",
+      "title": "Extra Q&A",
+      "qna": [
+        {
+          "question": "Can I reuse this starter for my own profile or brand?",
+          "answer": "Yes. Fork it, replace the placeholder content, and adjust the legal and SEO settings for your own deployment."
+        },
+        {
+          "question": "Which files usually need edits first?",
+          "answer": "Most forks start with config/site.json, config/profile.json, config/links.json, config/llms.json, config/legal/*.json, and public/images/."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "title": "FAQ"
+    }
+  ]
+}

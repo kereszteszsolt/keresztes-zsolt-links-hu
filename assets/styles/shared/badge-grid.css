@@ -1,0 +1,91 @@
+/*
+ * Profile Link Starter - badge-grid.css
+ * Styles the reusable badge grid layouts used across views.
+ *
+ * Copyright 2026 Keresztes Zsolt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.directory-content {
+  position: relative;
+}
+
+.badge-link-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--badge-grid-gap);
+  justify-content: start;
+}
+
+.badge-item-grid {
+  width: 100%;
+}
+
+.badge-link-grid .link-badge-left .link-badge-icon.badge-icon-frame,
+.badge-measure .link-badge-left .link-badge-icon.badge-icon-frame {
+  box-sizing: border-box;
+  min-height: 2.26em;
+  min-width: 2.38em;
+  padding: 0.16rem;
+}
+
+.badge-link-grid .badge-provider-icon-img,
+.badge-measure .badge-provider-icon-img {
+  transform: scale(calc(var(--icon-scale, 1) * 1.36));
+}
+
+.badge-link-grid .link-badge,
+.badge-measure .link-badge {
+  min-height: 34px;
+}
+
+.badge-link-grid .link-badge {
+  grid-template-columns:
+    minmax(var(--link-badge-left-min-width, 0), auto)
+    minmax(var(--link-badge-text-min-width, 0), auto);
+  max-width: none;
+  overflow: visible;
+  width: 100%;
+}
+
+.badge-measure .link-badge {
+  grid-template-columns:
+    minmax(var(--link-badge-left-min-width, 0), auto)
+    minmax(var(--link-badge-text-min-width, 0), auto);
+  max-width: none;
+  overflow: visible;
+  width: fit-content;
+}
+
+.badge-link-grid .link-badge-id,
+.badge-measure .link-badge-id {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.badge-measure {
+  height: 0;
+  left: -9999px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.badge-measure-item {
+  display: inline-flex;
+  margin-right: var(--badge-grid-gap);
+}

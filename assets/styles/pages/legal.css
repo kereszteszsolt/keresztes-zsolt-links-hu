@@ -1,0 +1,113 @@
+/*
+ * Profile Link Starter - legal.css
+ * Styles the standalone legal document pages.
+ *
+ * Copyright 2026 Keresztes Zsolt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.legal-layout {
+  align-items: start;
+  display: grid;
+  min-height: 100vh;
+  padding-top: 2.4rem;
+}
+
+.legal-page-panel {
+  display: grid;
+  gap: 1.2rem;
+  margin: 0 auto;
+  max-width: 52rem;
+  width: 100%;
+}
+
+.legal-page-header {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.legal-page-header h1,
+.legal-modal-section h2 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+.legal-modal-section p,
+.legal-modal-updated {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.legal-modal-updated {
+  font-size: 0.92rem;
+}
+
+.legal-back-link {
+  align-items: center;
+  color: var(--accent-strong);
+  display: inline-flex;
+  font-weight: 700;
+  justify-self: start;
+  min-height: var(--control-height-sm);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.legal-modal-body {
+  display: grid;
+  gap: 1rem;
+}
+
+.legal-modal-section {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.legal-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.legal-modal-action {
+  align-items: center;
+  background: rgba(54, 30, 18, 0.06);
+  border: 1px solid rgba(54, 30, 18, 0.12);
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: var(--control-height-md);
+  padding: 0.55rem 0.95rem;
+  text-decoration: none;
+}
+
+.legal-modal-action:hover,
+.legal-modal-action:focus-visible {
+  border-color: rgba(54, 30, 18, 0.2);
+  color: var(--accent-strong);
+}
+
+.legal-modal-action-disabled {
+  opacity: 0.72;
+}
+
+@media (max-width: 640px) {
+  .legal-layout {
+    padding-top: 1.6rem;
+  }
+}
