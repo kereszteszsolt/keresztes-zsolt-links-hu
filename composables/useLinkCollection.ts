@@ -22,6 +22,27 @@ import type { LinkEntry, LinkFilter } from '~/types/config'
 
 export const normalizeCollectionValue = (value: string) => value.trim().toLowerCase()
 
+const allViewOrder = [
+  'youtube-hu',
+  'youtube-en',
+  'tiktok-hu',
+  'tiktok-en',
+  'linkedin',
+  'x',
+  'support',
+  'github',
+  'project-collection',
+  'website-hu',
+  'website-en',
+  'link-collection-hu',
+  'link-collection-en',
+  'facebook',
+  'instagram',
+  'focus-guard'
+] as const
+
+const duplicateAllViewAliases = new Map<string, string>([['project-collection-links', 'project-collection']])
+
 const readQueryValues = (query: LocationQuery, key: string) => {
   const value = query[key]
   return Array.isArray(value) ? value : [value]
@@ -70,4 +91,36 @@ export const filterLinksByTags = (links: LinkEntry[], activeTags: string[]) => {
   return links.filter((entry) =>
     entry.tags.some((tag) => normalizedTags.has(normalizeCollectionValue(tag)))
   )
+}
+
+const resolveAllViewId = (entry: LinkEntry) => duplicateAllViewAliases.get(entry.id) ?? entry.id
+
+export const sortLinksForAllView = (links: LinkEntry[]) => {
+  const order = allViewOrder
+  const orderIndex = new Map(order.map((id, index) => [id, index]))
+  const sourceIndex = new Map(links.map((entry, index) => [entry.id, index]))
+  const seenIds = new Set<string>()
+
+  return links
+    .filter((entry) => {
+      const resolvedId = resolveAllViewId(entry)
+
+      if (seenIds.has(resolvedId)) {
+        return false
+      }
+
+      seenIds.add(resolvedId)
+      return true
+    })
+    .slice()
+    .sort((left, right) => {
+      const leftOrder = orderIndex.get(resolveAllViewId(left)) ?? Number.MAX_SAFE_INTEGER
+      const rightOrder = orderIndex.get(resolveAllViewId(right)) ?? Number.MAX_SAFE_INTEGER
+
+      if (leftOrder !== rightOrder) {
+        return leftOrder - rightOrder
+      }
+
+      return (sourceIndex.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (sourceIndex.get(right.id) ?? Number.MAX_SAFE_INTEGER)
+    })
 }

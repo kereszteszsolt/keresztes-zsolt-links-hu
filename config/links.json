@@ -65,7 +65,7 @@
         "english",
         "video-platform"
       ],
-      "title": "Keresztes Zsolt - Vlog, Self-Dev, Science&Tech",
+      "title": "Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia",
       "description": "Önfejlesztési és STEM tartalmak angol, román és német nyelven.",
       "icon": "youtube",
       "profileId": "@KeresztesZsolti",
@@ -85,7 +85,7 @@
         "hungarian",
         "video-platform"
       ],
-      "title": "Keresztes Zsolt - Vlog,Önfejlesztés,Tudomány&Tech",
+      "title": "Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia",
       "description": "Önfejlesztési és STEM tartalmak magyar nyelven.",
       "icon": "youtube",
       "profileId": "@KeresztesZsolt",
@@ -179,7 +179,7 @@
     {
       "id": "website-en",
       "url": "https://www.kereszteszsolt.com",
-      "provider": "zsoltkeresztes.com",
+      "provider": "kereszteszsolt.com",
       "category": "personal-websites",
       "tags": [
         "english",
@@ -187,7 +187,7 @@
       ],
       "title": "Személyes weboldal (EN)",
       "description": "Keresztes Zsolt személyes weboldala angol nyelvű tartalommal.",
-      "icon": "affiliate",
+      "icon": "website",
       "profileId": "kereszteszsolt.com",
       "highlightUrlIdentifier": true,
       "styles": {

@@ -2,17 +2,17 @@
 
 > Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a fő profilok, weboldalak, videócsatornák és kapcsolati lehetőségek egy helyen érhetők el.
 
-Site: https://zsoltkeresztes.hu
-Language: hu
-Author: Keresztes Zsolt
-Category: Linkgyűjtemény
+Oldal: https://zsoltkeresztes.hu
+Nyelv: hu
+Szerző: Keresztes Zsolt
+Kategória: Linkgyűjtemény
 
 ## Profil
 
-- Name: Keresztes Zsolt
-- Domain Label: zsoltkeresztes.hu
-- Role: fejlesztő · mérnök · tartalomkészítő
-- Bio: Fejlesztő, mérnök és tartalomkészítő. Magyar és angol nyelven készítek önfejlesztési és STEM tartalmakat, és dolgokat építek a weben.
+- Név: Keresztes Zsolt
+- Domain: zsoltkeresztes.hu
+- Szerep: fejlesztő · mérnök · tartalomkészítő
+- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő. Magyar és angol nyelven készítek önfejlesztési és STEM tartalmakat, és dolgokat építek a weben.
 
 ## Profiladatok
 
@@ -34,8 +34,8 @@ Category: Linkgyűjtemény
 ## Linkek kategóriánként
 
 ### Videóplatform
-- YouTube (EN): Keresztes Zsolt - Vlog, Self-Dev, Science&Tech - https://www.youtube.com/@KeresztesZsolti
-- YouTube (HU): Keresztes Zsolt - Vlog,Önfejlesztés,Tudomány&Tech - https://www.youtube.com/@KeresztesZsolt
+- YouTube (EN): Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia - https://www.youtube.com/@KeresztesZsolti
+- YouTube (HU): Keresztes Zsolt - Vlog, önfejlesztés, tudomány és technológia - https://www.youtube.com/@KeresztesZsolt
 - TikTok (EN): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsoltie
 - TikTok (HU): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsolti
 
@@ -46,7 +46,7 @@ Category: Linkgyűjtemény
 - Instagram: Keresztes Zsolt - https://www.instagram.com/kereszteszsolt_kzs
 
 ### Személyes weboldalak
-- zsoltkeresztes.com: Személyes weboldal (EN) - https://www.kereszteszsolt.com
+- kereszteszsolt.com: Személyes weboldal (EN) - https://www.kereszteszsolt.com
 - kereszteszsolt.hu: Személyes weboldal (HU) - https://www.kereszteszsolt.hu
 
 ### Támogatás
@@ -69,16 +69,16 @@ Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a fő profilok, webolda
 
 ## Kérdések és válaszok
 
-- Q: Melyik a hivatalos LinkedIn-profil?
-  A: A Keresztes Zsolthoz tartozó hivatalos LinkedIn-profil a linkgyűjteményben található.
-- Q: Találok itt angol nyelvű csatornákat is?
-  A: Igen. Az oldal külön angol és magyar csatornákat, weboldalakat és videós linkeket is felsorol.
+- K: Melyik a hivatalos LinkedIn-profil?
+  V: A Keresztes Zsolthoz tartozó hivatalos LinkedIn-profil a linkgyűjteményben található.
+- K: Találok itt angol nyelvű csatornákat is?
+  V: Igen. Az oldal külön angol és magyar csatornákat, weboldalakat és videós linkeket is felsorol.
 
 ## GYIK
 
-- Q: Mi ez az oldal?
-  A: Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a profilok, videócsatornák, weboldalak és kapcsolati lehetőségek egy helyen találhatók.
-- Q: Milyen linkeket tartalmaz?
-  A: A gyűjteményben megtalálhatók a fő közösségi profilok, a személyes weboldalak, a videócsatornák és a támogatási oldal.
-- Q: Hogyan lehet kapcsolatba lépni?
-  A: A kapcsolatfelvételhez használd a LinkedIn-profilt vagy a láblécben megadott e-mail-címet.
+- K: Mi ez az oldal?
+  V: Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a profilok, videócsatornák, weboldalak és kapcsolati lehetőségek egy helyen találhatók.
+- K: Milyen linkeket tartalmaz?
+  V: A gyűjteményben megtalálhatók a fő közösségi profilok, a személyes weboldalak, a videócsatornák és a támogatási oldal.
+- K: Hogyan lehet kapcsolatba lépni?
+  V: A kapcsolatfelvételhez használd a LinkedIn-profilt vagy a láblécben megadott e-mail-címet.

@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import { filterLinksByFilter } from '~/composables/useLinkCollection'
+import { filterLinksByFilter, sortLinksForAllView } from '~/composables/useLinkCollection'
 import type { LegalAction } from '~/types/config'
 
 const { filters, legalDocuments, links, profile, site, ui } = useSiteData()
@@ -78,7 +78,13 @@ const { resolvedActions: activeResolvedLegalActions } = useResolvedLegalActions(
 
 const filteredLinks = computed(() => {
   const selectedFilter = filters.find((entry) => entry.id === activeFilter.value)
-  return filterLinksByFilter(links, selectedFilter)
+  const matchingLinks = filterLinksByFilter(links, selectedFilter)
+
+  if (!selectedFilter || selectedFilter.type === 'all') {
+    return sortLinksForAllView(matchingLinks)
+  }
+
+  return matchingLinks
 })
 const {
   linkSurface,
