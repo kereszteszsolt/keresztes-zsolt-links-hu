@@ -9,16 +9,17 @@
       "heading": "Licenc és újrafelhasználás",
       "paragraphs": [
         "A weboldal forráskódja az Apache License 2.0 licenc alatt érhető el.",
-        "A kód a licenc feltételei szerint újra felhasználható, de ez a repó egy konkrét oldal megvalósítása — nem ajánlott alap új projektekhez.",
-        "Ha ebből a repóból nézel megoldásokat vagy használsz fel kódrészleteket, cseréld le vagy dolgozd át a benne szereplő adatokat, tartalmakat és azonosítókat, hogy elkerüld az eredeti projekttel való összetévesztést vagy félrevezető megjelenítést."
+        "A kód a licenc feltételei szerint újra felhasználható. Ugyanakkor ez a repó a saját weboldalam konkrét megvalósítása, ezért általában nem ez az ajánlott kiindulópont új projektekhez.",
+        "Ha ebből a repóból nézel megoldásokat vagy használsz fel részleteket, érdemes a benne szereplő oldalspecifikus tartalmakat, adatokat, arculati elemeket és azonosítókat lecserélni vagy átdolgozni, hogy az új változat ne legyen összetéveszthető az eredeti projekttel, és ne keltsen ahhoz kapcsolódó benyomást."
       ]
     },
     {
       "heading": "Ajánlott kiindulópont",
       "paragraphs": [
-        "Ha saját linkgyűjteményt vagy profiljellegű weboldalt szeretnél készíteni, a Profile Links Starter sablon repót érdemes fork-olni vagy sablonként használni.",
-        "A legtöbb esetben nem ezt az oldalrepót érdemes közvetlenül fork-olni: a sablon repó kifejezetten tiszta testreszabásra és újrahasznosításra készült.",
-        "Ez a repó inkább valós példaprojektként hasznos. A saját változatodhoz a sablon repó az ajánlott kiindulópont."
+        "A Profile Links Starter sablonrepót szintén én készítettem, és saját linkgyűjtemény vagy profiljellegű weboldal készítéséhez ez az ajánlott kiindulópont.",
+        "Ezzel a repóval szemben a sablon kifejezetten újrahasználásra készült, és olyan helyőrző tartalmakat tartalmaz, amelyeket testreszabás során könnyen le lehet cserélni.",
+        "A legtöbb esetben ezért érdemesebb a sablonrepót fork-olni vagy alapként használni, nem pedig ezt az oldalrepót közvetlenül másolni.",
+        "Ez a repó inkább egy élő példaprojekt. Kiindulópontként a sablonrepó ajánlott."
       ]
     }
   ],
