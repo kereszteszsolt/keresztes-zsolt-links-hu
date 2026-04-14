@@ -74,7 +74,9 @@ const activeLegalActions = computed<LegalAction[]>(() => activeLegalDocument.val
 const activeLegalRoute = computed(() =>
   activeLegalDocument.value ? `/${activeLegalDocument.value.id}` : '/'
 )
-const placeStandaloneActionLast = computed(() => activeLegalDocument.value?.id === 'contact')
+const placeStandaloneActionLast = computed(() =>
+  ['contact', 'impressum'].includes(activeLegalDocument.value?.id ?? '')
+)
 const { resolvedActions: activeResolvedLegalActions } = useResolvedLegalActions(activeLegalActions)
 
 const filteredLinks = computed(() => {
