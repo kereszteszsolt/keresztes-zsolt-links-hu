@@ -1,47 +1,44 @@
 {
   "id": "gtc",
   "buttonLabel": "ÁSZF",
-  "title": "Általános szerződési feltételek",
+  "title": "Felhasználási feltételek",
   "updatedAtLabel": "Utolsó frissítés",
-  "updatedAt": "2026-04-09",
+  "updatedAt": "2026. április 14.",
   "sections": [
     {
       "heading": "Hatály",
       "paragraphs": [
-        "Ez a weboldal nyilvános információkat, profilhivatkozásokat és a weboldal tulajdonosához, valamint a felsorolt projektekhez kapcsolódó beágyazott tartalmakat kínál.",
-        "A weboldal használatával elfogadod, hogy azt kizárólag jogszerűen használod.",
-        "Tilos a weboldalt vagy a hozzá kapcsolódó erőforrásokat károsítani, megzavarni vagy visszaélésszerűen igénybe venni."
+        "Ez a weboldal a tulajdonosához és az oldalon bemutatott projektekhez kapcsolódó nyilvános információkat, profilhivatkozásokat és beágyazott tartalmakat tartalmaz.",
+        "A weboldal használatával a látogató elfogadja, hogy azt kizárólag jogszerű módon használja, és nem károsítja, zavarja meg vagy használja visszaélésszerűen sem a weboldalt, sem a hozzá kapcsolódó erőforrásokat."
       ]
     },
     {
       "heading": "Tartalom és elérhetőség",
       "paragraphs": [
-        "A tartalom \"jelen formájában\" érhető el, és előzetes értesítés nélkül bármikor frissülhet, eltávolítható vagy átrendezhető.",
-        "A külső hivatkozások olyan harmadik felek szolgáltatásaira mutatnak, amelyek a saját feltételeik és szabályzataik szerint működnek."
+        "A tartalom „jelen állapotában” érhető el, és előzetes értesítés nélkül bármikor módosítható, eltávolítható vagy átrendezhető.",
+        "A weboldal harmadik felek weboldalaira vagy szolgáltatásaira mutató hivatkozásokat is tartalmazhat, amelyekre saját feltételeik és szabályzataik vonatkoznak."
       ]
     },
     {
       "heading": "Szellemi tulajdon",
       "paragraphs": [
-        "Eltérő jelzés hiányában a márkaelemek, az elrendezés, a szöveges tartalom és a weboldal egyéb eredeti anyagai a weboldal tulajdonosának szellemi tulajdonát képezik.",
-        "Nyilvános oldalakat hivatkozhatsz vagy megoszthatsz, de eredeti tartalmat nem közölhetsz újra félrevezető módon, és engedély nélkül nem kelthetsz olyan benyomást, mintha a tartalom jóváhagyott vagy támogatott lenne."
+        "Eltérő jelzés hiányában a weboldal arculata, elrendezése, szöveges tartalma és egyéb eredeti anyagai a weboldal tulajdonosának szellemi tulajdonát képezik.",
+        "A nyilvánosan elérhető oldalak hivatkozhatók és megoszthatók, de az eredeti tartalom jelentős része nem tehető közzé félrevezető módon, és előzetes engedély nélkül nem kelthető olyan benyomás, mintha azt a weboldal tulajdonosa támogatná vagy jóváhagyná."
       ]
     },
     {
-      "heading": "Felelősség kizárása",
+      "heading": "Felelősségkizárás és felelősségkorlátozás",
       "paragraphs": [
-        "A weboldal harmadik féltől származó könyvtárakat, függőségeket és szolgáltatásokat is használ, beleértve a nyílt forráskódú összetevőket.",
-        "Ezek kiválasztása és használata jóhiszeműen, kellő gondossággal történik. Ugyanakkor nem garantálható, hogy minden összetevő mindenkor mentes hibáktól, sérülékenységektől vagy biztonsági problémáktól — egyes hiányosságok csak később válhatnak ismertté.",
-        "A weboldal tulajdonosa ésszerű erőfeszítéseket tesz azért, hogy a weboldal pontos, elérhető és biztonságos legyen. Ennek ellenére nem garantálja, hogy a tartalom teljes, hibátlan, folyamatosan hozzáférhető vagy biztonsági sérülékenységektől mentes.",
-        "A weboldal használata a saját felelősségedre történik.",
-        "A weboldal tulajdonosa nem felel a weboldal használatából vagy elérhetetlenségéből, illetve harmadik felek szolgáltatásaira, könyvtáraira vagy tartalmaira való hagyatkozásból eredő közvetlen vagy közvetett károkért."
+        "A weboldal harmadik féltől származó könyvtárakat, függőségeket és szolgáltatásokat is használhat, ideértve a nyílt forráskódú összetevőket is. Ezek kiválasztása és használata jóhiszeműen történik, ugyanakkor nem garantálható, hogy minden ilyen összetevő mindenkor hibamentes, sérülékenységektől mentes vagy teljesen biztonságos.",
+        "A weboldal tulajdonosa ésszerű erőfeszítéseket tesz annak érdekében, hogy a weboldal pontos, elérhető és biztonságos legyen, de nem garantálja, hogy a tartalom teljes, a weboldal folyamatosan hozzáférhető, vagy minden esetben hibáktól és biztonsági sérülékenységektől mentes.",
+        "A weboldal használata saját felelősségre történik.",
+        "Az alkalmazandó jog által megengedett legteljesebb mértékben a weboldal tulajdonosa nem felel a weboldal használatából vagy elérhetetlenségéből, illetve harmadik felek szolgáltatásaira, könyvtáraira vagy tartalmaira való hagyatkozásból eredő közvetlen vagy közvetett károkért."
       ]
     },
     {
       "heading": "A feltételek módosítása",
       "paragraphs": [
-        "Ezek a feltételek előzetes értesítés nélkül bármikor módosíthatók.",
-        "A weboldal további használata a módosított feltételek elfogadásának minősül."
+        "Ezek a feltételek előzetes értesítés nélkül bármikor módosíthatók. A weboldal további használata a módosított feltételek elfogadásának minősül."
       ]
     }
   ]
