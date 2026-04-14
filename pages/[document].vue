@@ -73,7 +73,7 @@ useSeoMeta({
             <p class="eyebrow">{{ legalDocument.buttonLabel }}</p>
             <h1>{{ legalDocument.title }}</h1>
           </div>
-          <p class="legal-modal-updated">
+          <p v-if="legalDocument.updatedAtLabel && legalDocument.updatedAt" class="legal-modal-updated">
             {{ legalDocument.updatedAtLabel }}: {{ legalDocument.updatedAt }}
           </p>
         </div>
@@ -84,7 +84,7 @@ useSeoMeta({
             :key="section.heading"
             class="legal-modal-section"
           >
-            <h2>{{ section.heading }}</h2>
+            <h2 v-if="section.heading">{{ section.heading }}</h2>
             <p v-for="paragraph in section.paragraphs" :key="paragraph">
               {{ paragraph }}
             </p>

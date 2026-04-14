@@ -1,15 +1,14 @@
 {
   "id": "contact",
   "buttonLabel": "Kapcsolat",
-  "title": "Kapcsolat",
-  "updatedAtLabel": "Csatornák",
-  "updatedAt": "LinkedIn + e-mail",
+  "title": "Kapcsolatfelvétel",
+  "updatedAtLabel": "",
+  "updatedAt": "",
   "sections": [
     {
-      "heading": "Kapcsolatfelvétel",
+      "heading": "",
       "paragraphs": [
-        "Ehhez a weboldalhoz a LinkedIn az elsődleges kapcsolati csatorna.",
-        "Közvetlen kapcsolatfelvételhez az e-mail-cím is elérhető alább."
+        "Az oldallal kapcsolatos vagy egyéb kérdések esetén LinkedInen vagy e-mailben is felvehető a kapcsolat."
       ]
     }
   ],

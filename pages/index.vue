@@ -74,6 +74,7 @@ const activeLegalActions = computed<LegalAction[]>(() => activeLegalDocument.val
 const activeLegalRoute = computed(() =>
   activeLegalDocument.value ? `/${activeLegalDocument.value.id}` : '/'
 )
+const placeStandaloneActionLast = computed(() => activeLegalDocument.value?.id === 'contact')
 const { resolvedActions: activeResolvedLegalActions } = useResolvedLegalActions(activeLegalActions)
 
 const filteredLinks = computed(() => {
@@ -421,7 +422,7 @@ useSeoMeta({
             </button>
           </div>
 
-          <p class="legal-modal-updated">
+          <p v-if="activeLegalDocument.updatedAtLabel && activeLegalDocument.updatedAt" class="legal-modal-updated">
             {{ activeLegalDocument.updatedAtLabel }}: {{ activeLegalDocument.updatedAt }}
           </p>
 
@@ -431,7 +432,7 @@ useSeoMeta({
               :key="section.heading"
               class="legal-modal-section"
             >
-              <h3>{{ section.heading }}</h3>
+              <h3 v-if="section.heading">{{ section.heading }}</h3>
               <p v-for="paragraph in section.paragraphs" :key="paragraph">
                 {{ paragraph }}
               </p>
@@ -439,7 +440,7 @@ useSeoMeta({
           </div>
 
           <div v-if="activeResolvedLegalActions.length" class="legal-modal-actions">
-            <NuxtLink class="legal-modal-action" :to="activeLegalRoute">
+            <NuxtLink v-if="!placeStandaloneActionLast" class="legal-modal-action" :to="activeLegalRoute">
               Open standalone page
             </NuxtLink>
             <template v-for="action in activeResolvedLegalActions" :key="`${activeLegalDocument?.id}-${action.key}`">
@@ -456,6 +457,9 @@ useSeoMeta({
                 {{ action.label }}
               </span>
             </template>
+            <NuxtLink v-if="placeStandaloneActionLast" class="legal-modal-action" :to="activeLegalRoute">
+              Open standalone page
+            </NuxtLink>
           </div>
           <div v-else class="legal-modal-actions">
             <NuxtLink class="legal-modal-action" :to="activeLegalRoute">

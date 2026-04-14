@@ -12,7 +12,7 @@ Kategória: Linkgyűjtemény
 - Név: Keresztes Zsolt
 - Domain: zsoltkeresztes.hu
 - Szerep: fejlesztő · mérnök · tartalomkészítő
-- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő. Magyarul és angolul készítek önfejlesztési és STEM tartalmakat, emellett különféle fejlesztői projekteken dolgozom.
+- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő vagyok. Magyarul és angolul készítek önfejlesztési és STEM témájú tartalmakat, emellett különféle szoftverfejlesztési projekteken dolgozom.
 
 ## Profiladatok
 
