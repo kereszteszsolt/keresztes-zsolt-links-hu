@@ -3,20 +3,26 @@
   "buttonLabel": "Impresszum",
   "title": "Impresszum",
   "updatedAtLabel": "Utolsó frissítés",
-  "updatedAt": "2026-04-09",
+  "updatedAt": "2026. április 14.",
   "sections": [
     {
-      "heading": "Üzemeltető",
+      "heading": "Szolgáltató",
       "paragraphs": [
         "A weboldalért felelős: Keresztes Zsolt.",
-        "Ez egy egyéni fejlesztő személyes weboldala, természetes személyként, nem gazdasági társaságként.",
-        "Weboldal: zsoltkeresztes.hu."
+        "Ez egy egyéni fejlesztő által működtetett személyes weboldal, nem céges oldal.",
+        "Weboldal: zsoltkeresztes.com"
+      ]
+    },
+    {
+      "heading": "Tárhelyszolgáltatás",
+      "paragraphs": [
+        "A weboldal GitHub Pages szolgáltatással van hosztolva, és a GitHub infrastruktúráján keresztül érhető el."
       ]
     },
     {
       "heading": "Kapcsolat",
       "paragraphs": [
-        "LinkedIn- és e-mailes kapcsolatfelvételi lehetőségek alább érhetők el."
+        "Az oldallal kapcsolatos vagy egyéb kérdések esetén LinkedInen vagy e-mailben lehet kapcsolatba lépni az alábbi elérhetőségeken."
       ]
     }
   ],
