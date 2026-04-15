@@ -3,24 +3,33 @@
   "buttonLabel": "Licenc",
   "title": "Licenc",
   "updatedAtLabel": "Utolsó frissítés",
-  "updatedAt": "2026. április 14.",
+  "updatedAt": "2026. április 15.",
   "sections": [
     {
       "heading": "Licenc és újrafelhasználás",
       "paragraphs": [
         "Kódlicenc: Apache License 2.0.",
         "A weboldal forráskódja az Apache License 2.0 licenc alatt érhető el.",
-        "A kód a licenc feltételei szerint újra felhasználható. Ugyanakkor ez a repó a saját weboldalam konkrét megvalósítása, ezért általában nem ez az ajánlott kiindulópont új projektekhez.",
-        "Ha ebből a repóból nézel megoldásokat vagy használsz fel részleteket, érdemes a benne szereplő oldalspecifikus tartalmakat, adatokat, arculati elemeket és azonosítókat lecserélni vagy átdolgozni, hogy az új változat ne legyen összetéveszthető az eredeti projekttel, és ne keltsen ahhoz kapcsolódó benyomást."
+        "A kód a licenc feltételei szerint újra felhasználható. Ugyanakkor ez a repó a saját weboldalam élő, oldalspecifikus megvalósítása, nem mintaprojekt és nem általános célú kiindulócsomag.",
+        "Ha ebből a repóból nézel megoldásokat vagy használsz fel részleteket, a benne szereplő oldalspecifikus tartalmakat, adatokat, arculati elemeket, azonosítókat és egyéb asseteket érdemes lecserélni vagy átdolgozni, hogy az új változat ne legyen összetéveszthető az eredeti projekttel, és ne keltsen vele kapcsolatot sugalló benyomást."
       ]
     },
     {
       "heading": "Ajánlott kiindulópont",
       "paragraphs": [
-        "A Profile Links Starter sablonrepót szintén én készítettem, és saját linkgyűjtemény vagy profiljellegű weboldal készítéséhez ez az ajánlott kiindulópont.",
+        "A Profile Links Starter sablonrepót szintén én készítettem, és a saját jelenlegi oldalam elkészítéséhez is ezt a sablont használtam alapként.",
+        "A sablont részben saját használatra, részben pedig azért hoztam létre, hogy mások is könnyebben készíthessenek egy hasonló linkgyűjteményes vagy profiljellegű weboldalt.",
         "Ezzel a repóval szemben a sablon kifejezetten újrahasználásra készült, és olyan helyőrző tartalmakat tartalmaz, amelyeket testreszabás során könnyen le lehet cserélni.",
-        "A legtöbb esetben ezért érdemesebb a sablonrepót fork-olni vagy alapként használni, nem pedig ezt az oldalrepót közvetlenül másolni.",
-        "Ez a repó inkább egy élő példaprojekt. Kiindulópontként a sablonrepó ajánlott."
+        "A legtöbb esetben ezért érdemesebb a sablonrepót fork-olni vagy kiindulópontként használni, nem pedig ezt az oldalrepót közvetlenül másolni vagy abból elindulni.",
+        "Ez a repó egy valós, élő projekt megvalósítása. Saját változathoz a sablonrepó az ajánlott kiindulópont."
+      ]
+    },
+    {
+      "heading": "Ikonok és vizuális elemek",
+      "paragraphs": [
+        "A projektben használt általános ikonok többsége a UXWing ingyenes ikonforrásából vagy más külső forrásból származik, és ezekre a saját licencfeltételeik vonatkoznak.",
+        "A repó emellett tartalmazhat egyedi alkalmazás- vagy projektikonokat is, amelyek egy adott projekt arculatát és vizuális azonosítását szolgálják.",
+        "Ezek a projektspecifikus ikonok nem általános újrafelhasználásra szolgálnak, és nem használhatók fel más, nem kapcsolódó projektek vagy márkajelzések részeként. Legfeljebb az adott projektre való hivatkozás céljából használhatók, de nem olyan módon, amely tulajdonosi kapcsolatot, hivatalos kötődést vagy jóváhagyást sugall."
       ]
     }
   ],

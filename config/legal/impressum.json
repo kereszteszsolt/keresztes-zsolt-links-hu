@@ -28,14 +28,14 @@
   ],
   "actions": [
     {
+      "label": "LinkedIn megnyitása",
+      "href": "https://www.linkedin.com/in/kereszteszsolt"
+    },
+        {
       "label": "E-mail {{email}}",
       "email": true,
       "emailParts": ["kapcsolat@", "kereszteszsolt", ".hu"],
       "emailOrder": [0, 1, 2]
-    },
-    {
-      "label": "LinkedIn megnyitása",
-      "href": "https://www.linkedin.com/in/kereszteszsolt"
     }
   ]
 }
