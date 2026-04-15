@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://zsoltkeresztes.hu/</loc>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
+    <loc>https://zsoltkeresztes.hu/contact</loc>
   </url>
   <url>
-    <loc>https://example.com/gtc</loc>
+    <loc>https://zsoltkeresztes.hu/gtc</loc>
   </url>
   <url>
-    <loc>https://example.com/privacy</loc>
+    <loc>https://zsoltkeresztes.hu/privacy</loc>
   </url>
   <url>
-    <loc>https://example.com/license</loc>
+    <loc>https://zsoltkeresztes.hu/license</loc>
   </url>
   <url>
-    <loc>https://example.com/impressum</loc>
+    <loc>https://zsoltkeresztes.hu/impressum</loc>
   </url>
   <url>
-    <loc>https://example.com/llms.txt</loc>
+    <loc>https://zsoltkeresztes.hu/llms.txt</loc>
   </url>
 </urlset>

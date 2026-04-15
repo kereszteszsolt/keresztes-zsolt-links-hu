@@ -113,6 +113,17 @@ export default defineNuxtConfig({
         dir: siteConfig.language.direction ?? 'ltr'
       },
       title: siteConfig.siteTitle,
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: `${appBaseUrl}favicon.svg`
+        },
+        {
+          rel: 'shortcut icon',
+          href: `${appBaseUrl}favicon.svg`
+        }
+      ],
       meta: [
         {
           name: 'description',

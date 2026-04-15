@@ -1,72 +1,84 @@
-# Your Name | Profile Links
+# Keresztes Zsolt | Linkgyűjtemény
 
-> Your Name is fictional placeholder data included in this starter. The site collects example social, portfolio, and contact links in one clear profile page.
+> Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a fő profilok, weboldalak, videócsatornák és kapcsolati lehetőségek egy helyen érhetők el.
 
-Site: https://example.com
-Language: en
-Author: Your Name
-Category: Personal Website
+Oldal: https://zsoltkeresztes.hu
+Nyelv: hu
+Szerző: Keresztes Zsolt
+Kategória: Linkgyűjtemény
 
-## Profile
+## Profil
 
-- Name: Your Name
-- Domain Label: profile-links-starter
-- Role: Product designer, frontend tinkerer | and content creator.
-- Bio: This example starter shows how to organize one profile links site around editable config files, reusable legal content, and static-friendly SEO defaults.
+- Név: Keresztes Zsolt
+- Domain: zsoltkeresztes.hu
+- Szerep: fejlesztő · mérnök · tartalomkészítő
+- Bemutatkozás: Fejlesztő, mérnök és tartalomkészítő vagyok. Magyarul és angolul készítek önfejlesztési és STEM témájú tartalmakat, emellett különféle szoftverfejlesztési projekteken dolgozom.
 
-## Profile Facts
+## Profiladatok
 
-- Focus: Design systems + frontend
-- Based in: New York, USA
+- Családnév: Keresztes
+- Keresztnév: Zsolt
 
-## Audiences
+## Célcsoportok
 
-- recruiters
-- collaborators
-- clients
+- követők
+- együttműködők
+- ügyfelek
 
-## Search Intents
+## Keresési szándékok
 
-- find official profile links
-- verify social accounts
-- discover work and contact options
+- hivatalos profilok megtalálása
+- közösségi csatornák ellenőrzése
+- munka és kapcsolatfelvételi lehetőségek felfedezése
 
-## Links By Category
+## Linkek kategóriánként
 
-### Work
-- LinkedIn: Your Name - https://www.linkedin.com/in/your-user-id
-- GitHub: @your-user-id - https://github.com/your-user-id
-- Website: example.com - https://example.com
+### Videóplatform
+- YouTube (EN): Keresztes Zsolt - Vlog, Self-Dev, Science&Tech - https://www.youtube.com/@KeresztesZsolti
+- YouTube (HU): Keresztes Zsolt - Vlog,Önfejlesztés,Tudomány&Tech - https://www.youtube.com/@KeresztesZsolt
+- TikTok (EN): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsoltie
+- TikTok (HU): Keresztes Zsolt - https://www.tiktok.com/@kereszteszsolti
 
-### Social
-- Instagram: @your-user-id - https://www.instagram.com/your-user-id
-- X (Twitter): @your-user-id - https://x.com/your-user-id
+### Közösségi média
+- LinkedIn: Keresztes Zsolt - https://www.linkedin.com/in/kereszteszsolt
+- X (Twitter): Keresztes Zsolt - https://x.com/KeresztesZsolti
+- Facebook: Keresztes Zsolt - https://www.facebook.com/KeresztesZsolt.kzs
+- Instagram: Keresztes Zsolt - https://www.instagram.com/kereszteszsolt_kzs
 
-### Watch
-- YouTube (EN): Your Name Studio - https://www.youtube.com/@your-user-id
-- YouTube (ES): Your Name Studio - https://www.youtube.com/@your-user-id-es
+### Személyes weboldalak
+- kereszteszsolt.com: Személyes weboldal (EN) - https://www.kereszteszsolt.com
+- kereszteszsolt.hu: Személyes weboldal (HU) - https://www.kereszteszsolt.hu
 
-## About This Starter
+### Támogatás
+- Buy Me A Coffee: Támogasd a munkámat - https://buymeacoffee.com/kereszteszsolt
 
-This repository is an upstream starter for profile-link sites. It is designed to be forked, edited through JSON files, and reused with placeholder-safe example data.
+### Fejlesztés
+- Focus Guard: Focus Guard - https://chromewebstore.google.com/detail/focus-guard/bdfnblnbjckkhknignkpmckeelfplill
+- GitHub: Keresztes Zsolt - https://github.com/kereszteszsolt
+- kereszteszsolt.net: Projektgyűjtemény - https://kereszteszsolt.net
 
-## Forking Notes
+### Linkgyűjtemény
+- zsoltkeresztes.com: Egyedi linkgyűjtemény (EN) - https://zsoltkeresztes.com
+- zsoltkeresztes.hu: Egyedi linkgyűjtemény (HU) - https://www.zsoltkeresztes.hu
+- kereszteszsolt.net: Projektgyűjtemény - https://kereszteszsolt.net
+- Linktree: Linktree összes link - https://linktr.ee/kereszteszsolt
 
-- What to replace: Update the placeholder identity, links, contact details, legal copy, and images before publishing.
-- Where to edit: Most forks only need config/site.json, config/profile.json, config/links.json, config/llms.json, config/legal/*.json, and public/images/.
+## A linkgyűjteményről
 
-## Extra Q&A
+Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a fő profilok, weboldalak, videócsatornák és kapcsolatfelvételi lehetőségek egy helyen érhetők el.
 
-- Q: Can I reuse this starter for my own profile or brand?
-  A: Yes. Fork it, replace the placeholder content, and adjust the legal and SEO settings for your own deployment.
-- Q: Which files usually need edits first?
-  A: Most forks start with config/site.json, config/profile.json, config/links.json, config/llms.json, config/legal/*.json, and public/images/.
+## Kérdések és válaszok
 
-## FAQ
+- K: Melyik a hivatalos LinkedIn-profil?
+  V: A Keresztes Zsolthoz tartozó hivatalos LinkedIn-profil a linkgyűjteményben található.
+- K: Találok itt angol nyelvű csatornákat is?
+  V: Igen. Az oldal külön angol és magyar csatornákat, weboldalakat és videós linkeket is felsorol.
 
-- Q: Who is "Your Name"?
-  A: "Your Name" is placeholder data used to show how the starter works before you replace the content with your own profile.
-- Q: What is this site for?
-  A: It is a clean single-page link hub for social profiles, portfolio destinations, and contact information.
-- Q: How do I customize it?
-  A: Edit the JSON files in the config folder, replace the example legal text, and deploy the generated site to GitHub Pages or your own domain.
+## GYIK
+
+- K: Mi ez az oldal?
+  V: Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a profilok, videócsatornák, weboldalak és kapcsolati lehetőségek egy helyen találhatók.
+- K: Milyen linkeket tartalmaz?
+  V: A gyűjteményben megtalálhatók a fő közösségi profilok, a személyes weboldalak, a videócsatornák és a támogatási oldal.
+- K: Hogyan lehet kapcsolatba lépni?
+  V: A kapcsolatfelvételhez használd a LinkedIn-profilt vagy a láblécben megadott e-mail-címet.

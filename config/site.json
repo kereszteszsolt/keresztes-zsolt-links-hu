@@ -1,71 +1,63 @@
 {
-  "siteName": "Your Name Links",
-  "siteTitle": "Your Name | Profile Links",
-  "siteDescription": "A simple profile links starter built with Nuxt, config-driven content, and static-friendly SEO defaults.",
-  "siteUrl": "https://example.com",
+  "siteName": "Keresztes Zsolt | Linkgyűjtemény",
+  "siteTitle": "Keresztes Zsolt | Linkgyűjtemény",
+  "siteDescription": "Keresztes Zsolt hivatalos magyar linkgyűjteménye a profilokhoz, weboldalakhoz, videócsatornákhoz és kapcsolatfelvételhez.",
+  "siteUrl": "https://zsoltkeresztes.hu",
   "language": {
-    "code": "en",
-    "locale": "en_US",
-    "name": "English",
+    "code": "hu",
+    "locale": "hu_HU",
+    "name": "Magyar",
     "direction": "ltr"
   },
   "themeColor": "#f4efe7",
-  "author": "Your Name",
+  "author": "Keresztes Zsolt",
   "canonicalPath": "/",
   "socialPreview": {
     "mode": "avatar",
     "src": "",
-    "alt": "Illustrated placeholder portrait for Your Name"
-  },
-  "announcement": {
-    "enabled": true,
-    "id": "template-placeholder-data",
-    "tone": "warning",
-    "sticky": false,
-    "dismissible": true,
-    "eyebrow": "Template notice",
-    "title": "Placeholder example data",
-    "message": "This starter uses fictional example personas and placeholder profile links. The names, accounts, and contact details shown here are not connected to any real person or official profile.",
-    "closeLabel": "Dismiss notice"
+    "alt": "Keresztes Zsolt linkgyűjteményének előnézeti képe"
   },
   "discovery": {
     "keywords": [
-      "Your Name",
-      "profile links",
-      "link in bio starter",
-      "Nuxt profile page",
-      "personal website starter"
+      "Keresztes Zsolt",
+      "linkgyűjtemény",
+      "közösségi profilok",
+      "weboldal",
+      "YouTube",
+      "TikTok",
+      "LinkedIn",
+      "GitHub"
     ],
-    "category": "Personal Website",
+    "category": "Linkgyűjtemény",
     "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     "includeLlmsTxtInSitemap": true,
-    "llmSummary": "Your Name is fictional placeholder data included in this starter. The site collects example social, portfolio, and contact links in one clear profile page.",
+    "llmSummary": "Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a fő profilok, weboldalak, videócsatornák és kapcsolati lehetőségek egy helyen érhetők el.",
     "audiences": [
-      "recruiters",
-      "collaborators",
-      "clients"
+      "követők",
+      "együttműködők",
+      "ügyfelek"
     ],
     "intents": [
-      "find official profile links",
-      "verify social accounts",
-      "discover work and contact options"
+      "hivatalos profilok megtalálása",
+      "közösségi csatornák ellenőrzése",
+      "munka és kapcsolatfelvételi lehetőségek felfedezése"
     ],
     "faq": [
       {
-        "question": "Who is \"Your Name\"?",
-        "answer": "\"Your Name\" is placeholder data used to show how the starter works before you replace the content with your own profile."
+        "question": "Mi ez az oldal?",
+        "answer": "Keresztes Zsolt hivatalos magyar linkgyűjteménye, ahol a profilok, videócsatornák, weboldalak és kapcsolati lehetőségek egy helyen találhatók."
       },
       {
-        "question": "What is this site for?",
-        "answer": "It is a clean single-page link hub for social profiles, portfolio destinations, and contact information."
+        "question": "Milyen linkeket tartalmaz?",
+        "answer": "A gyűjteményben megtalálhatók a fő közösségi profilok, a személyes weboldalak, a videócsatornák és a támogatási oldal."
       },
       {
-        "question": "How do I customize it?",
-        "answer": "Edit the JSON files in the config folder, replace the example legal text, and deploy the generated site to GitHub Pages or your own domain."
+        "question": "Hogyan lehet kapcsolatba lépni?",
+        "answer": "A kapcsolatfelvételhez használd a LinkedIn-profilt vagy a láblécben megadott e-mail-címet."
       }
     ]
   },
   "deploy": {
-    "cname": ""
+    "cname": "zsoltkeresztes.hu"
   }
 }

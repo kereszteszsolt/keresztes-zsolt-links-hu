@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">Your Name placeholder portrait</title>
-  <desc id="desc">An abstract portrait illustration with the initials YN.</desc>
+  <title id="title">Keresztes Zsolt portréillusztráció</title>
+  <desc id="desc">Absztrakt portréillusztráció KZ monogrammal.</desc>
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#201510" />
@@ -10,5 +10,5 @@
   <rect width="512" height="512" rx="256" fill="url(#bg)" />
   <circle cx="256" cy="196" r="92" fill="#f6e7d7" />
   <path d="M126 426c20-84 78-126 130-126s110 42 130 126" fill="#f6e7d7" />
-  <text x="50%" y="82%" text-anchor="middle" font-family="Space Grotesk, Avenir Next, Segoe UI, sans-serif" font-size="84" font-weight="800" fill="#fff7ef" letter-spacing="8">YN</text>
+  <text x="50%" y="82%" text-anchor="middle" font-family="Space Grotesk, Avenir Next, Segoe UI, sans-serif" font-size="84" font-weight="800" fill="#fff7ef" letter-spacing="8">KZ</text>
 </svg>

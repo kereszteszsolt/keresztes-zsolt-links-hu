@@ -27,6 +27,7 @@ import instagramIcon from '~/assets/icons/uxwing/black-instagram-icon.svg?url'
 import supportIcon from '~/assets/icons/uxwing/plastic-takeaway-coffee-icon.svg?url'
 import linktreeIcon from '~/assets/icons/uxwing/linktree-white-icon.svg?url'
 import webIcon from '~/assets/icons/uxwing/web-icon.svg?url'
+import affiliateIcon from '~/assets/icons/uxwing/affiliate-icon.svg?url'
 import type { LinkEntry } from '~/types/config'
 
 const providerIcons: Record<string, string> = {
@@ -40,7 +41,8 @@ const providerIcons: Record<string, string> = {
   linktree: linktreeIcon,
   support: supportIcon,
   web: webIcon,
-  website: webIcon
+  website: webIcon,
+  affiliate: affiliateIcon
 }
 
 const providerColors: Record<string, string> = {

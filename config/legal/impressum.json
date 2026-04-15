@@ -1,31 +1,41 @@
 {
   "id": "impressum",
-  "buttonLabel": "Impressum",
-  "title": "Impressum",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "Impresszum",
+  "title": "Impresszum",
+  "updatedAtLabel": "Utolsó frissítés",
+  "updatedAt": "2026. április 14.",
   "sections": [
     {
-      "heading": "Publisher information",
+      "heading": "Szolgáltató",
       "paragraphs": [
-        "Your Name",
-        "123 Example Street, Example City, NY 10001",
-        "This is placeholder publisher information. Replace it with the details required in your jurisdiction."
+        "A weboldalért felelős: Keresztes Zsolt.",
+        "Ez egy egyéni fejlesztő által működtetett személyes weboldal, nem céges oldal.",
+        "Weboldal: zsoltkeresztes.hu"
       ]
     },
     {
-      "heading": "Responsibility for content",
+      "heading": "Tárhelyszolgáltatás",
       "paragraphs": [
-        "If you need an impressum, update this section to reflect your legal identity, ownership details, and the party responsible for the published content."
+        "A weboldal GitHub Pages szolgáltatással van hosztolva, és a GitHub infrastruktúráján keresztül érhető el."
+      ]
+    },
+    {
+      "heading": "Kapcsolat",
+      "paragraphs": [
+        "Az oldallal kapcsolatos vagy egyéb kérdések esetén LinkedInen vagy e-mailben lehet kapcsolatba lépni az alábbi elérhetőségeken."
       ]
     }
   ],
   "actions": [
     {
-      "label": "Email {{email}}",
+      "label": "LinkedIn megnyitása",
+      "href": "https://www.linkedin.com/in/kereszteszsolt"
+    },
+        {
+      "label": "E-mail {{email}}",
       "email": true,
-      "emailParts": ["ple.c", "our-u", "om", "id@ex", "y", "ser-", "am"],
-      "emailOrder": [4, 1, 5, 3, 6, 0, 2]
+      "emailParts": ["kapcsolat@", "kereszteszsolt", ".hu"],
+      "emailOrder": [0, 1, 2]
     }
   ]
 }

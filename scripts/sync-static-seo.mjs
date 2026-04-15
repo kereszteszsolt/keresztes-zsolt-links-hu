@@ -64,7 +64,7 @@ const toBodyParagraphs = (value) =>
     : []
 
 const renderBulletList = (items) => items.map((entry) => `- ${entry}`).join('\n')
-const renderQnaList = (items) => items.map((entry) => `- Q: ${entry.question}\n  A: ${entry.answer}`).join('\n')
+const renderQnaList = (items) => items.map((entry) => `- K: ${entry.question}\n  V: ${entry.answer}`).join('\n')
 const renderSection = (title, blocks) => {
   const content = blocks.filter(Boolean)
 
@@ -148,10 +148,10 @@ const renderLinksByCategory = (title) => {
 
 const renderProfileSection = (title) => {
   const lines = [
-    `- Name: ${profile.name}`,
-    profile.domainLabel ? `- Domain Label: ${profile.domainLabel}` : '',
-    profileRoleText ? `- Role: ${profileRoleText}` : '',
-    profile.bio ? `- Bio: ${profile.bio}` : ''
+    `- Név: ${profile.name}`,
+    profile.domainLabel ? `- Domain: ${profile.domainLabel}` : '',
+    profileRoleText ? `- Szerep: ${profileRoleText}` : '',
+    profile.bio ? `- Bemutatkozás: ${profile.bio}` : ''
   ].filter(Boolean)
 
   return renderSection(title, [lines.join('\n')])
@@ -206,12 +206,12 @@ const renderChapterSection = (title, section) => {
 }
 
 const defaultLlmsSections = [
-  { type: 'profile', title: 'Profile' },
-  { type: 'profileFacts', title: 'Profile Facts' },
-  { type: 'audiences', title: 'Audiences' },
-  { type: 'intents', title: 'Search Intents' },
-  { type: 'links', title: 'Primary Links', groupBy: 'flat' },
-  { type: 'faq', title: 'FAQ' }
+  { type: 'profile', title: 'Profil' },
+  { type: 'profileFacts', title: 'Profiladatok' },
+  { type: 'audiences', title: 'Célcsoportok' },
+  { type: 'intents', title: 'Keresési szándékok' },
+  { type: 'links', title: 'Elsődleges linkek', groupBy: 'flat' },
+  { type: 'faq', title: 'GYIK' }
 ]
 
 const llmsSections = Array.isArray(llms.sections) && llms.sections.length
@@ -271,10 +271,10 @@ const llmsTxt = `# ${site.siteTitle}
 
 > ${site.discovery.llmSummary}
 
-Site: ${siteUrl}
-Language: ${site.language.code}
-Author: ${site.author}
-Category: ${site.discovery.category}
+Oldal: ${siteUrl}
+Nyelv: ${site.language.code}
+Szerző: ${site.author}
+Kategória: ${site.discovery.category}
 
 ${renderedLlmsSections.join('\n\n')}
 `

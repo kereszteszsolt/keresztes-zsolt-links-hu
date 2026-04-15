@@ -1,22 +1,37 @@
 {
   "id": "privacy",
-  "buttonLabel": "Privacy",
-  "title": "Privacy Policy",
-  "updatedAtLabel": "Updated",
-  "updatedAt": "2026-04-10",
+  "buttonLabel": "Adatvédelem",
+  "title": "Adatvédelmi tájékoztató",
+  "updatedAtLabel": "Utolsó frissítés",
+  "updatedAt": "2026. április 14.",
   "sections": [
     {
-      "heading": "Data handling",
+      "heading": "Miről szól ez az oldal",
       "paragraphs": [
-        "This example site is primarily a static page with external links. Replace this placeholder with your real policy covering analytics, contact forms, third-party embeds, and hosting details.",
-        "If you use cookies, analytics, or email collection, explain what data is processed, why it is processed, and how users can contact you about their rights."
+        "Ez egy személyes weboldal, amely elsősorban nyilvános bemutatkozó felületként, projektáttekintőként és linkgyűjteményként szolgál.",
+        "Nem kínál felhasználói fiókokat, beépített kapcsolatfelvételi űrlapokat, közvetlen fizetési lehetőséget vagy hasonló interaktív funkciókat."
       ]
     },
     {
-      "heading": "Third-party platforms",
+      "heading": "Adatkezelés",
       "paragraphs": [
-        "Most profile-link sites route visitors to external platforms such as LinkedIn, GitHub, Instagram, or YouTube.",
-        "Document those third-party destinations and link to their policies where appropriate."
+        "A weboldal nem gyűjt közvetlenül személyes adatokat felhasználói fiókokon, beküldési űrlapokon vagy egyedi analitikai megoldásokon keresztül.",
+        "Ugyanakkor a hosztingszolgáltató és az oldal működéséhez szükséges technikai infrastruktúra korlátozott technikai adatokat — például IP-címeket, kérésnaplókat, böngészőmetaadatokat vagy hasonló információkat — kezelhet a weboldal működtetése, fenntartása és védelme érdekében."
+      ]
+    },
+    {
+      "heading": "Harmadik felek szolgáltatásai és külső hivatkozások",
+      "paragraphs": [
+        "Ha külső hivatkozást nyitsz meg, elhagyod ezt a weboldalt, és közvetlenül egy harmadik fél szolgáltatásával lépsz kapcsolatba, például egy közösségi platformmal, kódhoszting-szolgáltatással vagy fizetési szolgáltatóval.",
+        "Ezek a szolgáltatások a saját feltételeik és adatvédelmi szabályzatuk szerint működnek, és az adataidat ettől a weboldaltól függetlenül kezelhetik.",
+        "Ugyanez vonatkozhat a harmadik féltől származó beágyazott tartalmakra is, amennyiben ilyenek megjelennek az oldalon."
+      ]
+    },
+    {
+      "heading": "Kapcsolat és frissítések",
+      "paragraphs": [
+        "Adatvédelemmel kapcsolatos kérdések esetén a weboldal tulajdonosa a láblécben megadott elérhetőségeken keresztül érhető el.",
+        "Ez a tájékoztató időről időre frissülhet, különösen akkor, ha a weboldal később analitikát, űrlapokat, felhasználói fiókokat vagy más, adatkezeléssel járó funkciókat vezet be."
       ]
     }
   ]
