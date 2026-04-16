@@ -420,8 +420,9 @@
   box-shadow: var(--shadow-overlay);
   display: grid;
   gap: 1rem;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
   max-height: min(90vh, 52rem);
-  overflow: auto;
+  overflow: hidden;
   padding: 1.35rem;
   width: min(52rem, 100%);
 }
@@ -448,6 +449,11 @@
 .legal-modal-body {
   display: grid;
   gap: 1rem;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-inline-end: 0.35rem;
+  scrollbar-gutter: stable;
 }
 
 .legal-modal-actions {

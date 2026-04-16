@@ -161,6 +161,7 @@ export interface LinkStyles {
   badge2Color?: string
   badge1Color?: string
   iconScale?: number
+  tileScale?: number
 }
 
 export interface LinkFilter {
@@ -233,7 +234,8 @@ export interface UiConfig {
   embedEmptyState: string
   viewModes: {
     list: string
-    badges: string
+    tiles: string
+    badges?: string
   }
   featuredLabel: string
   footerNavigationLabel: string

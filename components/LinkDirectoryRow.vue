@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { LinkEntry } from '~/types/config'
-import { useBadgePresentation } from '~/composables/useBadgePresentation'
+import { useLinkPresentation } from '~/composables/useLinkPresentation'
 
 const props = defineProps<{
   entry: LinkEntry
@@ -28,13 +28,18 @@ const props = defineProps<{
   featuredLabel: string
 }>()
 
-const { providerMarks, toProviderKey, getEntryIcon, getBadgeMessage } = useBadgePresentation()
+const {
+  providerMarks,
+  toProviderKey,
+  getEntryIcon,
+  getProviderLabel,
+  getHighlightedUrlParts
+} = useLinkPresentation()
 
 const rowNumber = computed(() => String(props.index + 1).padStart(2, '0'))
 const isFeatured = computed(() => props.entry.featured === true || props.entry.tags.includes('featured'))
-const shouldHighlightUrlIdentifier = computed(() => props.entry.highlightUrlIdentifier === true)
 const providerLabel = computed(() =>
-  getBadgeMessage(props.entry.provider, props.entry.providerExtra)
+  getProviderLabel(props.entry.provider, props.entry.providerExtra)
 )
 const providerKey = computed(() => toProviderKey(props.entry.provider))
 const providerIcon = computed(() => getEntryIcon(props.entry))
@@ -45,91 +50,7 @@ const providerMark = computed(() => {
   )
 })
 
-const getUrlHighlightCandidates = (profileId?: string) => {
-  const trimmedProfileId = profileId?.trim()
-
-  if (!trimmedProfileId) {
-    return []
-  }
-
-  return Array.from(
-    new Set([
-      trimmedProfileId,
-      trimmedProfileId.replace(/^@+/, '')
-    ].filter(Boolean))
-  ).sort((left, right) => right.length - left.length)
-}
-
-const normalizeSegmentMark = (value?: number | string) => {
-  const parsedValue =
-    typeof value === 'number'
-      ? value
-      : typeof value === 'string' && value.trim()
-        ? Number(value)
-        : 1
-
-  if (!Number.isFinite(parsedValue) || parsedValue < 1) {
-    return 1
-  }
-
-  return Math.floor(parsedValue)
-}
-
-const rowUrlParts = computed(() => {
-  if (!shouldHighlightUrlIdentifier.value) {
-    return {
-      prefix: props.entry.url,
-      identifier: '',
-      hasIdentifier: false
-    }
-  }
-
-  const normalizedUrl = props.entry.url.replace(/\/+$/, '')
-  const candidates = getUrlHighlightCandidates(props.entry.profileId)
-  const matchingSuffix = candidates.find((candidate) => normalizedUrl.endsWith(candidate))
-
-  if (!matchingSuffix) {
-    return {
-      prefix: props.entry.url,
-      identifier: '',
-      hasIdentifier: false
-    }
-  }
-
-  const segmentMark = normalizeSegmentMark(props.entry.segmentMark)
-
-  if (segmentMark > 1) {
-    try {
-      const parsedUrl = new URL(normalizedUrl)
-      const pathSegments = parsedUrl.pathname.replace(/\/+$/, '').split('/').filter(Boolean)
-      const matchedPathSegment = matchingSuffix.replace(/^@+/, '')
-      const lastPathSegment = pathSegments[pathSegments.length - 1]
-
-      if (
-        pathSegments.length &&
-        (lastPathSegment === matchedPathSegment || lastPathSegment === matchingSuffix)
-      ) {
-        const highlightedSegmentCount = Math.min(segmentMark, pathSegments.length)
-        const highlightedPath = pathSegments.slice(-highlightedSegmentCount).join('/')
-        const prefixPath = pathSegments.slice(0, -highlightedSegmentCount).join('/')
-
-        return {
-          prefix: `${parsedUrl.origin}${prefixPath ? `/${prefixPath}/` : '/'}`,
-          identifier: highlightedPath,
-          hasIdentifier: true
-        }
-      }
-    } catch {
-      // Fall back to the default single-suffix highlight below.
-    }
-  }
-
-  return {
-    prefix: normalizedUrl.slice(0, normalizedUrl.length - matchingSuffix.length),
-    identifier: matchingSuffix,
-    hasIdentifier: true
-  }
-})
+const rowUrlParts = computed(() => getHighlightedUrlParts(props.entry))
 const rowStyle = computed(() => {
   const iconScale = props.entry.styles?.iconScale ?? 1
 

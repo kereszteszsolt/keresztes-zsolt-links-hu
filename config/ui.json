@@ -7,7 +7,7 @@
   "embedEmptyState": "Az aktuális címkeszűrőnek megfelelő link nem található.",
   "viewModes": {
     "list": "Lista",
-    "badges": "Jelvények"
+    "tiles": "Csempék"
   },
   "featuredLabel": "kiemelt",
   "footerNavigationLabel": "Lábléc navigáció",
