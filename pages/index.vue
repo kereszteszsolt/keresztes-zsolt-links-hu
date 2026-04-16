@@ -35,7 +35,7 @@ const {
 } = useSiteSeo()
 
 const nameParts = profile.name.split(' ')
-const viewMode = ref<'list' | 'badges'>('list')
+const viewMode = ref<'list' | 'tiles'>('list')
 const activeFilter = ref(filters[0]?.id ?? 'all')
 const activeLegalDocId = ref<string | null>(null)
 
@@ -89,14 +89,6 @@ const filteredLinks = computed(() => {
 
   return matchingLinks
 })
-const {
-  linkSurface,
-  badgeMeasure,
-  widestBadgeLeftWidth,
-  widestBadgeRightWidth,
-  gridLayoutStyle,
-  measureBadgeLayout
-} = useBadgeGridLayout(filteredLinks)
 
 const openLegalDocument = (documentId: string) => {
   activeLegalDocId.value = documentId
@@ -105,10 +97,6 @@ const openLegalDocument = (documentId: string) => {
 const closeLegalDocument = () => {
   activeLegalDocId.value = null
 }
-
-watch(viewMode, async () => {
-  await measureBadgeLayout()
-})
 
 watch(activeLegalDocId, (value) => {
   if (typeof document === 'undefined') {
@@ -321,8 +309,8 @@ useSeoMeta({
               <button :class="{ active: viewMode === 'list' }" type="button" @click="viewMode = 'list'">
                 {{ ui.viewModes.list }}
               </button>
-              <button :class="{ active: viewMode === 'badges' }" type="button" @click="viewMode = 'badges'">
-                {{ ui.viewModes.badges }}
+              <button :class="{ active: viewMode === 'tiles' }" type="button" @click="viewMode = 'tiles'">
+                {{ ui.viewModes.tiles }}
               </button>
             </div>
 
@@ -340,7 +328,7 @@ useSeoMeta({
           </div>
         </div>
 
-        <div ref="linkSurface" class="directory-content">
+        <div class="directory-content">
           <div v-if="viewMode === 'list'" class="compact-list">
             <LinkDirectoryRow
               v-for="(entry, index) in filteredLinks"
@@ -351,32 +339,14 @@ useSeoMeta({
             />
           </div>
 
-          <div v-else class="badge-link-grid" :style="gridLayoutStyle">
-            <a
+          <div v-else class="tile-link-grid">
+            <LinkTile
               v-for="entry in filteredLinks"
               :key="entry.id"
-              :href="entry.url"
-              class="badge-item badge-item-grid"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <LinkBadge
-                :entry="entry"
-                :badge-left-wmin="widestBadgeLeftWidth"
-                :badge-text-wmin="widestBadgeRightWidth"
-              />
-            </a>
-          </div>
-
-          <div ref="badgeMeasure" class="badge-measure" aria-hidden="true">
-            <div
-              v-for="entry in filteredLinks"
-              :key="`measure-${entry.id}`"
-              :data-link="entry.url"
-              class="badge-measure-item"
-            >
-              <LinkBadge :entry="entry" />
-            </div>
+              :entry="entry"
+              :featured-label="ui.featuredLabel"
+              class="tile-item-grid"
+            />
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 <!--
-  Profile Link Starter - badges.vue
+  Profile Link Starter - tiles.vue
   Renders the embeddable tile grid filtered by query parameters.
 
   Copyright 2026 Keresztes Zsolt

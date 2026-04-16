@@ -1,0 +1,183 @@
+/*
+ * Profile Link Starter - link-tile.css
+ * Styles the tile-card link component used in directory and embed views.
+ *
+ * Copyright 2026 Keresztes Zsolt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.link-tile {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 250, 241, 0.9)),
+    linear-gradient(140deg, color-mix(in srgb, var(--tile-accent, var(--accent-strong)) 10%, transparent), transparent 62%);
+  border: 1px solid rgba(54, 30, 18, 0.08);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--item-shadow);
+  display: grid;
+  gap: 0.9rem;
+  height: 100%;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.link-tile::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.52), rgba(255, 255, 255, 0));
+  border-radius: calc(var(--radius-sm) - 0.32rem);
+  content: "";
+  inset: 0.32rem;
+  pointer-events: none;
+  position: absolute;
+}
+
+.link-tile:hover,
+.link-tile:focus-visible {
+  border-color: color-mix(in srgb, var(--tile-accent, var(--accent-strong)) 36%, rgba(54, 30, 18, 0.12));
+  box-shadow: 0 20px 38px rgba(75, 43, 29, 0.14), 0 4px 12px rgba(75, 43, 29, 0.06);
+  transform: translateY(-2px);
+}
+
+.link-tile:focus-visible {
+  outline: none;
+}
+
+.link-tile-top,
+.link-tile-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.link-tile-top {
+  align-items: center;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.link-tile-icon {
+  background: var(--icon-square);
+  border: 0;
+  box-shadow: 0 12px 22px rgba(75, 43, 29, 0.08);
+  color: var(--icon-mark);
+  height: 3rem;
+  width: 3rem;
+}
+
+.link-tile-heading {
+  align-self: center;
+  display: grid;
+  gap: 0.28rem;
+  min-width: 0;
+}
+
+.link-tile-providerline {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.link-tile-provider {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.link-tile-title {
+  color: var(--text);
+  display: -webkit-box;
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  line-height: 1.05;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  word-break: break-word;
+}
+
+.link-tile-identity {
+  color: rgba(36, 23, 18, 0.76);
+  display: inline;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.link-tile-description {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.55;
+  margin: 0;
+  position: relative;
+  text-wrap: pretty;
+  z-index: 1;
+}
+
+.link-tile-footer {
+  border-top: 1px solid rgba(54, 30, 18, 0.08);
+  display: grid;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.link-tile-meta-row {
+  align-items: baseline;
+  display: grid;
+  gap: 0.45rem;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.link-tile-meta-label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.link-tile-url {
+  align-items: baseline;
+  display: flex;
+  font-size: 0.82rem;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.link-tile-url-prefix {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-tile-url-identifier {
+  color: var(--accent-strong);
+  flex: none;
+  font-weight: 700;
+}

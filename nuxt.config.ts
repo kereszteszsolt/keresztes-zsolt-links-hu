@@ -100,7 +100,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/styles/tokens.css',
     '~/assets/styles/base.css',
-    '~/assets/styles/shared/badge-grid.css'
+    '~/assets/styles/shared/tile-grid.css'
   ],
   runtimeConfig: {
     public: publicAppConfig
@@ -134,7 +134,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/contact', '/gtc', '/privacy', '/license', '/impressum', '/embed/badges', '/embed/list']
+      routes: ['/', '/contact', '/gtc', '/privacy', '/license', '/impressum', '/embed/tiles', '/embed/badges', '/embed/list']
     }
   }
 })

@@ -70,6 +70,8 @@
   --control-height-md: 2.5rem;
   --control-height-lg: 2.75rem;
   --badge-grid-gap: 0.5rem;
+  --tile-grid-gap: 0.75rem;
+  --tile-grid-min-width: 18rem;
 
   /* Backwards-compatible aliases used across the current UI */
   --bg: var(--color-bg);
