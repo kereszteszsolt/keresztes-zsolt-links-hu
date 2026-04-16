@@ -1,4 +1,4 @@
-# links-en
+# keresztes-zsolt-links-hu
 
 This repository contains the live, site-specific implementation of my personal links website.
 It is built from my **Profile Links Starter** template, which I created as a reusable starting point for myself and for others who want to build a similar profile or link collection site.
