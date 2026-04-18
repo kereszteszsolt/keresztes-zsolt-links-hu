@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <mask id="focus-guard-cutout">
+      <rect width="64" height="64" fill="#fff"/>
+      <rect x="18" y="14" width="5" height="24" rx="1" fill="#000"/>
+      <rect x="18" y="14" width="14" height="5" rx="1" fill="#000"/>
+      <rect x="18" y="24" width="11" height="5" rx="1" fill="#000"/>
+      <rect x="34" y="22" width="5" height="24" rx="1" fill="#000"/>
+      <rect x="34" y="22" width="12" height="5" rx="1" fill="#000"/>
+      <rect x="34" y="40" width="12" height="5" rx="1" fill="#000"/>
+      <rect x="41" y="33" width="5" height="12" rx="1" fill="#000"/>
+      <rect x="39" y="33" width="7" height="5" rx="1" fill="#000"/>
+    </mask>
+  </defs>
+  <path
+    fill="#000"
+    mask="url(#focus-guard-cutout)"
+    d="M32 4 52 11v16.5c0 14.53-8.15 24.67-20 32.5C20.15 52.17 12 42.03 12 27.5V11L32 4Z"
+  />
+</svg>
