@@ -15,7 +15,7 @@ Build a clean Nuxt profile-links starter that ships with example `Your Name` dat
 1. Start from the Nuxt scaffold and confirm the example site renders with one language only.
 2. Load all visible content from the config files and keep the page logic thin.
 3. Build the home page layout to match the reference style: hero, link list, and legal/footer area.
-4. Add reusable embed routes for list and badge views with a small query contract.
+4. Add reusable embed routes for tile, list, and badge views with a small query contract, including color query overrides for tile and list embeds.
 5. Add SEO defaults plus optional AI-facing discovery helpers from config, including language, canonical URL, metadata, structured data, and `llms.txt`.
 6. Split legal content into separate routes so each policy page can be indexed and linked directly.
 7. Add protected legal email actions that render only on the client.
@@ -25,7 +25,7 @@ Build a clean Nuxt profile-links starter that ships with example `Your Name` dat
 
 ## Finish Line
 - One example profile site is working end to end.
-- Reusable list and badge embed routes are working.
+- Reusable tile, list, and badge embed routes are working.
 - Every user-facing string comes from config.
 - SEO and legal pages are static and crawlable.
 - A fork owner can publish to GitHub Pages without changing the app structure.

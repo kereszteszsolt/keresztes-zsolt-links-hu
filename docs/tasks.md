@@ -13,7 +13,8 @@
 
 ## UI
 - Reuse the reference layout and styling approach for the hero, link list, and footer.
-- Add reusable `/embed/badges` and `/embed/list` routes with a small query contract.
+- Keep reusable `/embed/tiles`, `/embed/list`, and `/embed/badges` routes working.
+- Support tag filtering across all embed routes and color query overrides for `/embed/tiles` and `/embed/list`.
 - Keep the implementation simple and config-driven.
 - Make sure the page still looks correct on mobile and desktop.
 

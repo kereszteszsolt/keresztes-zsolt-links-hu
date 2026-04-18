@@ -1,9 +1,9 @@
-# links-en
+# links-hu
 
 This repository contains the live, site-specific implementation of my personal links website.
-It is built from my **Profile Links Starter template, which I created as a reusable starting point for myself and for others who want to build a similar profile or link collection site.
+It is built from my **Profile Links Starter** template, which I created as a reusable starting point for myself and for others who want to build a similar profile or link collection site.
 
-[(https://github.com/kereszteszsolt/profile-links-starter)]
+[profile-links-starter](https://github.com/kereszteszsolt/profile-links-starter)
 
 ## Recommended starting point
 
@@ -12,6 +12,24 @@ If you want to create your own version, use the **Profile Links Starter** templa
 Unlike this repository, the template is intentionally prepared for reuse and includes placeholder content designed to be replaced during customization.
 
 This repository should be understood as a real, live project built from that template, not as a general-purpose starter or example project.
+
+## Embeds
+
+This repo exposes three reusable embed routes:
+
+- `/embed/tiles` supports `with`, `col`, `tags`, plus color overrides `accent`, `itemBg`, `itemBorder`, `text`, `muted`, and `iconBg`
+- `/embed/list` supports `with`, `tags`, plus the same color overrides
+- `/embed/badges` supports `with`, `col`, and `tags`
+
+Color values can be passed either as plain hex like `ff6b2c` or URL-encoded with `#` like `%23ff6b2c`.
+
+Examples:
+
+```text
+/embed/tiles?with=36&col=2&tags=dev,code&accent=ff6b2c&itemBg=fff4ec&itemBorder=ffc39e&text=22160c&muted=8a5a35&iconBg=ff6b2c
+/embed/list?with=40&tags=social-media&accent=%23007a5a&itemBg=%23eefcf7&itemBorder=%23b6ead7&text=%230f2d24&muted=%23506f66&iconBg=%23007a5a
+/embed/badges?with=32&col=2&tags=projects
+```
 
 ## License and reuse
 

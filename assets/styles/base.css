@@ -637,8 +637,8 @@ select {
 
 .compact-row {
   align-items: center;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(54, 30, 18, 0.07);
+  background: var(--embed-item-background, rgba(255, 255, 255, 0.62));
+  border: 1px solid var(--embed-item-border, rgba(54, 30, 18, 0.07));
   border-radius: var(--radius-sm);
   box-shadow: var(--item-shadow);
   display: grid;
@@ -653,7 +653,7 @@ select {
 }
 
 .row-index {
-  color: rgba(143, 63, 38, 0.72);
+  color: var(--embed-accent-muted, rgba(143, 63, 38, 0.72));
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 600;
@@ -803,9 +803,9 @@ select {
 
 .row-featured {
   align-items: center;
-  background: rgba(186, 92, 61, 0.08);
+  background: var(--embed-featured-background, rgba(186, 92, 61, 0.08));
   border-radius: var(--radius-pill);
-  color: rgba(143, 63, 38, 0.88);
+  color: var(--embed-featured-color, rgba(143, 63, 38, 0.88));
   display: inline-flex;
   font-size: 0.7rem;
   font-weight: 800;

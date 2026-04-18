@@ -21,6 +21,7 @@
 import { computed } from 'vue'
 import {
   filterLinksByTags,
+  readEmbedColorStyle,
   readQueryNumber,
   readTagQuery
 } from '~/composables/useLinkCollection'
@@ -35,10 +36,12 @@ const requestedColumns = computed(() => {
 const requestedWidth = computed(() => readQueryNumber(route.query, 'with'))
 const activeTags = computed(() => readTagQuery(route.query))
 const filteredLinks = computed(() => filterLinksByTags(links, activeTags.value))
+const embedColorStyle = computed(() => readEmbedColorStyle(route.query))
 const pageStyle = computed(() => ({
   '--embed-gap': '0.75rem',
   '--embed-padding': '0.75rem',
-  '--embed-container-width': requestedWidth.value ? `${requestedWidth.value}rem` : '100%'
+  '--embed-container-width': requestedWidth.value ? `${requestedWidth.value}rem` : '100%',
+  ...embedColorStyle.value
 }))
 const tileGridStyle = computed(() =>
   requestedColumns.value

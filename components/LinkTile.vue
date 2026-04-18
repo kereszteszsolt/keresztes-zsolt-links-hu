@@ -64,7 +64,7 @@ const tileStyle = computed(() => {
   const tileScale = props.entry.styles?.tileScale ?? props.entry.styles?.iconScale ?? 1
 
   return {
-    '--tile-accent': getProviderColor(props.entry.provider),
+    '--tile-accent': `var(--embed-item-accent, ${getProviderColor(props.entry.provider)})`,
     '--table-icon-scale': String(tileScale)
   }
 })

@@ -19,9 +19,13 @@
 
 .link-tile {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 250, 241, 0.9)),
+    linear-gradient(
+      180deg,
+      var(--embed-item-background-top, rgba(255, 255, 255, 0.78)),
+      var(--embed-item-background-bottom, rgba(255, 250, 241, 0.9))
+    ),
     linear-gradient(140deg, color-mix(in srgb, var(--tile-accent, var(--accent-strong)) 10%, transparent), transparent 62%);
-  border: 1px solid rgba(54, 30, 18, 0.08);
+  border: 1px solid var(--embed-item-border, rgba(54, 30, 18, 0.08));
   border-radius: var(--radius-sm);
   box-shadow: var(--item-shadow);
   display: grid;
@@ -138,7 +142,7 @@
 }
 
 .link-tile-footer {
-  border-top: 1px solid rgba(54, 30, 18, 0.08);
+  border-top: 1px solid var(--embed-item-border, rgba(54, 30, 18, 0.08));
   display: grid;
   gap: 0.45rem;
   margin-top: auto;

@@ -22,6 +22,8 @@ import type { LinkEntry, LinkFilter } from '~/types/config'
 
 export const normalizeCollectionValue = (value: string) => value.trim().toLowerCase()
 
+const HEX_COLOR_PATTERN = /^#?(?:[0-9a-f]{3}|[0-9a-f]{4}|[0-9a-f]{6}|[0-9a-f]{8})$/i
+
 const allViewOrder = [
   'youtube-hu',
   'youtube-en',
@@ -48,6 +50,54 @@ const readQueryValues = (query: LocationQuery, key: string) => {
   return Array.isArray(value) ? value : [value]
 }
 
+const expandShortHexColor = (value: string) =>
+  value.length === 3 || value.length === 4
+    ? value.split('').map((segment) => `${segment}${segment}`).join('')
+    : value
+
+export const normalizeHexColor = (value?: string | null) => {
+  const trimmed = value?.trim()
+
+  if (!trimmed || !HEX_COLOR_PATTERN.test(trimmed)) {
+    return undefined
+  }
+
+  const compactHex = trimmed.startsWith('#') ? trimmed.slice(1) : trimmed
+  return `#${expandShortHexColor(compactHex).toLowerCase()}`
+}
+
+const hexColorToRgb = (value: string) => {
+  const normalizedColor = normalizeHexColor(value)
+
+  if (!normalizedColor) {
+    return undefined
+  }
+
+  const compactHex = normalizedColor.slice(1)
+  const opaqueHex = compactHex.length === 6 ? `${compactHex}ff` : compactHex
+  const alphaChannel = Number.parseInt(opaqueHex.slice(6, 8), 16) / 255
+
+  return {
+    red: Number.parseInt(opaqueHex.slice(0, 2), 16),
+    green: Number.parseInt(opaqueHex.slice(2, 4), 16),
+    blue: Number.parseInt(opaqueHex.slice(4, 6), 16),
+    alpha: Number.isFinite(alphaChannel) ? alphaChannel : 1
+  }
+}
+
+const applyHexOpacity = (value: string, opacity: number) => {
+  const parsedColor = hexColorToRgb(value)
+
+  if (!parsedColor) {
+    return undefined
+  }
+
+  const normalizedOpacity = Math.max(0, Math.min(1, opacity))
+  const alpha = Number((parsedColor.alpha * normalizedOpacity).toFixed(3))
+
+  return `rgba(${parsedColor.red}, ${parsedColor.green}, ${parsedColor.blue}, ${alpha})`
+}
+
 export const readQueryNumber = (query: LocationQuery, key: string) => {
   const [raw] = readQueryValues(query, key)
 
@@ -62,11 +112,64 @@ export const readQueryNumber = (query: LocationQuery, key: string) => {
   return undefined
 }
 
+export const readHexColorQuery = (query: LocationQuery, key: string) => {
+  const [raw] = readQueryValues(query, key)
+  return typeof raw === 'string' ? normalizeHexColor(raw) : undefined
+}
+
 export const readTagQuery = (query: LocationQuery, key = 'tags') =>
   readQueryValues(query, key)
     .flatMap((entry) => (typeof entry === 'string' ? entry.split(',') : []))
     .map(normalizeCollectionValue)
     .filter(Boolean)
+
+export const readEmbedColorStyle = (query: LocationQuery) => {
+  const accent = readHexColorQuery(query, 'accent')
+  const itemBackground = readHexColorQuery(query, 'itemBg')
+  const itemBorder = readHexColorQuery(query, 'itemBorder')
+  const text = readHexColorQuery(query, 'text')
+  const muted = readHexColorQuery(query, 'muted')
+  const iconBackground = readHexColorQuery(query, 'iconBg')
+  const style: Record<string, string> = {}
+
+  if (accent) {
+    style['--accent'] = accent
+    style['--accent-strong'] = accent
+    style['--accent-soft'] = applyHexOpacity(accent, 0.14) ?? accent
+    style['--embed-accent-muted'] = applyHexOpacity(accent, 0.72) ?? accent
+    style['--embed-featured-background'] = applyHexOpacity(accent, 0.1) ?? accent
+    style['--embed-featured-color'] = applyHexOpacity(accent, 0.9) ?? accent
+    style['--embed-item-accent'] = accent
+
+    if (!iconBackground) {
+      style['--icon-square'] = accent
+    }
+  }
+
+  if (itemBackground) {
+    style['--embed-item-background'] = itemBackground
+    style['--embed-item-background-top'] = itemBackground
+    style['--embed-item-background-bottom'] = itemBackground
+  }
+
+  if (itemBorder) {
+    style['--embed-item-border'] = itemBorder
+  }
+
+  if (text) {
+    style['--text'] = text
+  }
+
+  if (muted) {
+    style['--muted'] = muted
+  }
+
+  if (iconBackground) {
+    style['--icon-square'] = iconBackground
+  }
+
+  return style
+}
 
 export const filterLinksByFilter = (
   links: LinkEntry[],
