@@ -21,6 +21,7 @@
 import { computed } from 'vue'
 import type { LinkEntry } from '~/types/config'
 import { useLinkPresentation } from '~/composables/useLinkPresentation'
+import { resolveSafeHref } from '~/utils/safe-url'
 
 const props = defineProps<{
   entry: LinkEntry
@@ -59,15 +60,29 @@ const rowStyle = computed(() => {
     '--table-icon-scale': String(iconScale)
   }
 })
+
+const linkTarget = computed(() => {
+  const safeLink = resolveSafeHref(props.entry.url)
+
+  return {
+    href: safeLink?.href ?? '#',
+    target: safeLink?.target,
+    rel: safeLink?.rel,
+    disabled: safeLink?.disabled || safeLink?.href == null
+  }
+})
 </script>
 
 <template>
   <a
-    :href="entry.url"
+    :href="linkTarget.href"
     class="compact-row"
+    :class="{ 'compact-row-disabled': linkTarget.disabled }"
+    :aria-disabled="linkTarget.disabled ? 'true' : 'false'"
+    :target="linkTarget.target"
+    :rel="linkTarget.rel"
+    :tabindex="linkTarget.disabled ? -1 : undefined"
     :style="rowStyle"
-    target="_blank"
-    rel="noreferrer noopener"
   >
     <span class="row-index">{{ rowNumber }}</span>
     <div class="row-shield">

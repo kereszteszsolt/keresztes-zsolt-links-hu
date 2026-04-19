@@ -25,19 +25,19 @@ export const normalizeCollectionValue = (value: string) => value.trim().toLowerC
 const HEX_COLOR_PATTERN = /^#?(?:[0-9a-f]{3}|[0-9a-f]{4}|[0-9a-f]{6}|[0-9a-f]{8})$/i
 
 const allViewOrder = [
-  'youtube-hu',
   'youtube-en',
-  'tiktok-hu',
+  'youtube-hu',
   'tiktok-en',
+  'tiktok-hu',
   'linkedin',
   'x',
   'support',
   'github',
   'project-collection',
-  'website-hu',
   'website-en',
-  'link-collection-hu',
+  'website-hu',
   'link-collection-en',
+  'link-collection-hu',
   'facebook',
   'instagram',
   'focus-guard'
@@ -110,6 +110,47 @@ export const readQueryNumber = (query: LocationQuery, key: string) => {
   }
 
   return undefined
+}
+
+export const clampQueryNumber = (
+  value: number | undefined,
+  options: {
+    min?: number
+    max?: number
+    allowDecimal?: boolean
+  } = {}
+) => {
+  if (!Number.isFinite(value)) {
+    return undefined
+  }
+
+  const normalized = options.allowDecimal ? value : Math.floor(value)
+  const boundedMin = Number.isFinite(options.min) ? options.min : Number.NEGATIVE_INFINITY
+  const boundedMax = Number.isFinite(options.max) ? options.max : Number.POSITIVE_INFINITY
+
+  if (normalized < boundedMin) {
+    return boundedMin
+  }
+
+  if (normalized > boundedMax) {
+    return boundedMax
+  }
+
+  return normalized
+}
+
+export const readClampedQueryNumber = (
+  query: LocationQuery,
+  key: string,
+  options: {
+    min?: number
+    max?: number
+    allowDecimal?: boolean
+  } = {}
+) => {
+  const value = readQueryNumber(query, key)
+
+  return value == null ? undefined : clampQueryNumber(value, options)
 }
 
 export const readHexColorQuery = (query: LocationQuery, key: string) => {

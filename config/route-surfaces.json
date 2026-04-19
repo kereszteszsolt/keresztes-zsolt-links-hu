@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "legal": [
+    {
+      "id": "contact",
+      "path": "/contact",
+      "prerender": true,
+      "sitemap": true,
+      "inFooter": true
+    },
+    {
+      "id": "gtc",
+      "path": "/gtc",
+      "prerender": true,
+      "sitemap": true,
+      "inFooter": true
+    },
+    {
+      "id": "privacy",
+      "path": "/privacy",
+      "prerender": true,
+      "sitemap": true,
+      "inFooter": true
+    },
+    {
+      "id": "license",
+      "path": "/license",
+      "prerender": true,
+      "sitemap": true,
+      "inFooter": true
+    },
+    {
+      "id": "impressum",
+      "path": "/impressum",
+      "prerender": true,
+      "sitemap": true,
+      "inFooter": true
+    }
+  ]
+}

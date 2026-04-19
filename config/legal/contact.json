@@ -2,11 +2,11 @@
   "id": "contact",
   "buttonLabel": "Kapcsolat",
   "title": "Kapcsolatfelvétel",
-  "updatedAtLabel": "",
-  "updatedAt": "",
+  "updatedAtLabel": "Utoljára frissítve",
+  "updatedAt": "2026. április 16.",
   "sections": [
     {
-      "heading": "",
+      "heading": "Hogyan érheted el",
       "paragraphs": [
         "Az oldallal kapcsolatos vagy egyéb kérdések esetén LinkedInen vagy e-mailben is felvehető a kapcsolat."
       ]

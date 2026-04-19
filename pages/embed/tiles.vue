@@ -22,7 +22,7 @@ import { computed } from 'vue'
 import {
   filterLinksByTags,
   readEmbedColorStyle,
-  readQueryNumber,
+  readClampedQueryNumber,
   readTagQuery
 } from '~/composables/useLinkCollection'
 
@@ -30,10 +30,9 @@ const route = useRoute()
 const { links, site, ui } = useSiteData()
 
 const requestedColumns = computed(() => {
-  const raw = readQueryNumber(route.query, 'col')
-  return raw ? Math.max(1, Math.floor(raw)) : undefined
+  return readClampedQueryNumber(route.query, 'col', { min: 1, max: 8 })
 })
-const requestedWidth = computed(() => readQueryNumber(route.query, 'with'))
+const requestedWidth = computed(() => readClampedQueryNumber(route.query, 'with', { min: 16, max: 120 }))
 const activeTags = computed(() => readTagQuery(route.query))
 const filteredLinks = computed(() => filterLinksByTags(links, activeTags.value))
 const embedColorStyle = computed(() => readEmbedColorStyle(route.query))

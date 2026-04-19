@@ -22,7 +22,7 @@ import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { filterLinksByFilter, sortLinksForAllView } from '~/composables/useLinkCollection'
 import type { LegalAction } from '~/types/config'
 
-const { filters, legalDocuments, links, profile, site, ui } = useSiteData()
+const { filters, legalDocumentManifest, links, profile, site, ui } = useSiteData()
 const {
   keywords,
   sameAs,
@@ -66,18 +66,46 @@ const heroOverviewItems = computed<HeroOverviewItem[]>(() => {
   return items
 })
 
+const legalFooterDocumentManifest = legalDocumentManifest.filter((entry) => entry.inFooter)
 const activeLegalDocument = computed(
-  () => legalDocuments.find((document) => document.id === activeLegalDocId.value) ?? null
+  () => legalFooterDocumentManifest.find((entry) => entry.path === activeLegalDocId.value) ?? null
 )
 
-const activeLegalActions = computed<LegalAction[]>(() => activeLegalDocument.value?.actions ?? [])
+const activeLegalActions = computed<LegalAction[]>(
+  () => activeLegalDocument.value?.document.actions ?? []
+)
 const activeLegalRoute = computed(() =>
-  activeLegalDocument.value ? `/${activeLegalDocument.value.id}` : '/'
+  activeLegalDocument.value ? activeLegalDocument.value.path : '/'
 )
 const placeStandaloneActionLast = computed(() =>
-  ['contact', 'impressum'].includes(activeLegalDocument.value?.id ?? '')
+  ['contact', 'impressum'].includes(activeLegalDocument.value?.document.id ?? '')
 )
 const { resolvedActions: activeResolvedLegalActions } = useResolvedLegalActions(activeLegalActions)
+const orderedModalLegalActions = computed(() => {
+  const resolvedActions = activeResolvedLegalActions.value
+
+  if (resolvedActions.length <= 1) {
+    return resolvedActions
+  }
+
+  const emailActionIndexes = activeLegalActions.value
+    .map((action, index) => (action.email ? index : -1))
+    .filter((index) => index >= 0)
+
+  if (!emailActionIndexes.length) {
+    return resolvedActions
+  }
+
+  const emailActionIndexSet = new Set(emailActionIndexes)
+  const emailActions = resolvedActions.filter((_, index) => emailActionIndexSet.has(index))
+  const standardActions = resolvedActions.filter((_, index) => !emailActionIndexSet.has(index))
+
+  if (!standardActions.length) {
+    return resolvedActions
+  }
+
+  return [standardActions[0], ...emailActions, ...standardActions.slice(1)]
+})
 
 const filteredLinks = computed(() => {
   const selectedFilter = filters.find((entry) => entry.id === activeFilter.value)
@@ -354,15 +382,15 @@ useSeoMeta({
       <section class="footer-tile panel" :aria-label="ui.footerNavigationLabel">
         <nav class="footer-tile-actions" :aria-label="ui.footerNavigationLabel">
           <button
-            v-for="document in legalDocuments"
-            :key="document.id"
+            v-for="document in legalFooterDocumentManifest"
+            :key="document.path"
             class="footer-action footer-action-button"
             type="button"
             :aria-haspopup="'dialog'"
-            :aria-expanded="activeLegalDocId === document.id"
-            @click="openLegalDocument(document.id)"
+            :aria-expanded="activeLegalDocId === document.path"
+            @click="openLegalDocument(document.path)"
           >
-            {{ document.buttonLabel }}
+            {{ document.document.buttonLabel }}
           </button>
         </nav>
         <div class="footer-tile-bottom">
@@ -377,12 +405,14 @@ useSeoMeta({
           class="legal-modal"
           role="dialog"
           aria-modal="true"
-          :aria-labelledby="`legal-modal-title-${activeLegalDocument.id}`"
+          :aria-labelledby="`legal-modal-title-${activeLegalDocument.document.id}`"
         >
           <div class="legal-modal-header">
             <div>
-              <p class="eyebrow">{{ activeLegalDocument.buttonLabel }}</p>
-              <h2 :id="`legal-modal-title-${activeLegalDocument.id}`">{{ activeLegalDocument.title }}</h2>
+              <p class="eyebrow">{{ activeLegalDocument.document.buttonLabel }}</p>
+              <h2 :id="`legal-modal-title-${activeLegalDocument.document.id}`">
+                {{ activeLegalDocument.document.title }}
+              </h2>
             </div>
             <button
               class="legal-modal-close"
@@ -394,13 +424,16 @@ useSeoMeta({
             </button>
           </div>
 
-          <p v-if="activeLegalDocument.updatedAtLabel && activeLegalDocument.updatedAt" class="legal-modal-updated">
-            {{ activeLegalDocument.updatedAtLabel }}: {{ activeLegalDocument.updatedAt }}
+          <p
+            v-if="activeLegalDocument.document.updatedAtLabel && activeLegalDocument.document.updatedAt"
+            class="legal-modal-updated"
+          >
+            {{ activeLegalDocument.document.updatedAtLabel }}: {{ activeLegalDocument.document.updatedAt }}
           </p>
 
           <div class="legal-modal-body">
             <section
-              v-for="section in activeLegalDocument.sections"
+              v-for="section in activeLegalDocument.document.sections"
               :key="section.heading"
               class="legal-modal-section"
             >
@@ -411,11 +444,14 @@ useSeoMeta({
             </section>
           </div>
 
-          <div v-if="activeResolvedLegalActions.length" class="legal-modal-actions">
+          <div v-if="orderedModalLegalActions.length" class="legal-modal-actions">
             <NuxtLink v-if="!placeStandaloneActionLast" class="legal-modal-action" :to="activeLegalRoute">
               Open standalone page
             </NuxtLink>
-            <template v-for="action in activeResolvedLegalActions" :key="`${activeLegalDocument?.id}-${action.key}`">
+            <template
+              v-for="action in orderedModalLegalActions"
+              :key="`${activeLegalDocument?.document.id}-${action.key}`"
+            >
               <a
                 v-if="action.href"
                 class="legal-modal-action"

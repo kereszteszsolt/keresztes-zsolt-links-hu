@@ -20,6 +20,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import type { ResolvedAnnouncement } from '~/types/config'
+import { resolveSafeHref } from '~/utils/safe-url'
 
 const props = defineProps<{
   announcement: ResolvedAnnouncement
@@ -29,8 +30,13 @@ const dismissed = ref(false)
 
 const storageKey = computed(() => `site-announcement:${props.announcement.id}`)
 const actionHref = computed(() => props.announcement.action?.href?.trim() ?? '')
-const hasAction = computed(() => Boolean(props.announcement.action?.label && actionHref.value))
-const actionIsExternal = computed(() => /^(https?:)?\/\//i.test(actionHref.value))
+const resolvedActionHref = computed(() => resolveSafeHref(actionHref.value))
+const hasAction = computed(
+  () => Boolean(props.announcement.action?.label && resolvedActionHref.value && !resolvedActionHref.value.disabled)
+)
+const actionIsExternal = computed(() => Boolean(resolvedActionHref.value?.external))
+const actionTarget = computed(() => resolvedActionHref.value?.target)
+const actionRel = computed(() => resolvedActionHref.value?.rel)
 const isVisible = computed(() => !dismissed.value)
 
 const loadDismissedState = () => {
@@ -88,16 +94,16 @@ onMounted(() => {
         <NuxtLink
           v-if="hasAction && !actionIsExternal"
           class="site-announcement-link"
-          :to="actionHref"
+          :to="resolvedActionHref?.href ?? ''"
         >
           {{ announcement.action?.label }}
         </NuxtLink>
         <a
           v-else-if="hasAction"
           class="site-announcement-link"
-          :href="actionHref"
-          target="_blank"
-          rel="noopener noreferrer"
+          :href="resolvedActionHref?.href ?? ''"
+          :target="actionTarget"
+          :rel="actionRel"
         >
           {{ announcement.action?.label }}
         </a>

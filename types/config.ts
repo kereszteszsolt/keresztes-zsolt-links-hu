@@ -198,6 +198,19 @@ export interface LegalSection {
   paragraphs: string[]
 }
 
+export interface LegalRouteSurface {
+  id: string
+  path: string
+  inFooter?: boolean
+  prerender?: boolean
+  sitemap?: boolean
+}
+
+export interface RouteSurfaces {
+  version?: number
+  legal: LegalRouteSurface[]
+}
+
 export interface LegalAction {
   label: string
   href?: string

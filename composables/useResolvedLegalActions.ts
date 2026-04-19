@@ -20,10 +20,9 @@
 import { computed, onMounted, ref, toValue } from 'vue'
 import type { MaybeRefOrGetter } from 'vue'
 import type { LegalAction, ResolvedLegalAction } from '~/types/config'
+import { resolveSafeHref } from '~/utils/safe-url'
 
 const EMAIL_LABEL_TOKEN = '{{email}}'
-
-const isExternalWebUrl = (value?: string) => /^(https?:)?\/\//i.test(value?.trim() ?? '')
 
 const reconstructEmail = (emailParts?: string[], emailOrder?: number[]) => {
   if (!Array.isArray(emailParts) || !Array.isArray(emailOrder)) {
@@ -69,16 +68,15 @@ const resolveEmailHref = (action: LegalAction, isClientReady: boolean) => {
 }
 
 const resolveStandardAction = (action: LegalAction, index: number): ResolvedLegalAction => {
-  const href = action.href?.trim()
-  const isExternal = Boolean(href && isExternalWebUrl(href))
+  const safeHref = resolveSafeHref(action.href?.trim())
 
   return {
     key: `legal-action-${index}`,
     label: action.label.trim(),
-    href: href || undefined,
-    target: isExternal ? '_blank' : undefined,
-    rel: isExternal ? 'noreferrer noopener' : undefined,
-    disabled: !href
+    href: safeHref?.href,
+    target: safeHref?.target,
+    rel: safeHref?.rel,
+    disabled: safeHref?.disabled || safeHref?.href == null
   }
 }
 

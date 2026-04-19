@@ -17,9 +17,14 @@
  * limitations under the License.
  */
 
-import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import { existsSync, mkdirSync, readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs'
+import { basename, dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import {
+  parseLegalRouteSurfaces,
+  resolveAppBasePath,
+  resolvePublicSiteUrl
+} from '../utils/site-config-contract.mjs'
 
 const rootDir = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const configDir = resolve(rootDir, 'config')
@@ -38,7 +43,76 @@ const loadOptionalJson = (path, fallback = {}) => {
   return JSON.parse(readFileSync(filePath, 'utf8'))
 }
 
-const trimTrailingSlash = (value) => value.replace(/\/+$/, '')
+const resolveRepositorySegment = () => {
+  const repository = process.env.GITHUB_REPOSITORY?.trim()
+  const repositoryName = repository?.split('/')[1]?.trim()
+
+  if (repositoryName) {
+    return repositoryName
+  }
+
+  return basename(rootDir.replace(/[\\/]+$/, ''))
+}
+
+const routeSurfaceEntries = parseLegalRouteSurfaces(loadJson('route-surfaces.json'))
+const legalDocumentIndex = new Map()
+const legalDocumentFiles = readdirSync(resolve(configDir, 'legal')).filter((entry) => entry.endsWith('.json'))
+
+for (const legalFile of legalDocumentFiles) {
+  const path = `legal/${legalFile}`
+  const rawLegalDocument = loadJson(path)
+  const legalId = String(rawLegalDocument?.id ?? '').trim().toLowerCase()
+
+  if (!legalId) {
+    throw new Error(`[config] Missing id in config/${path}`)
+  }
+
+  if (legalDocumentIndex.has(legalId)) {
+    throw new Error(`[config] Duplicate legal document id "${legalId}" in config/legal/*.json`)
+  }
+
+  legalDocumentIndex.set(legalId, rawLegalDocument)
+}
+
+const legalPrerenderRoutes = []
+const legalSitemapRoutes = []
+const legalSurfaceIds = new Set()
+
+for (const entry of routeSurfaceEntries) {
+  const legalId = entry.id
+  const legalDocument = legalDocumentIndex.get(legalId)
+
+  if (!legalDocument) {
+    throw new Error(
+      `[config] Missing legal document file for route "${entry.path}" in config/legal/${legalId}.json`
+    )
+  }
+
+  const documentId = String(legalDocument.id ?? '').trim().toLowerCase()
+  if (documentId !== legalId) {
+    throw new Error(
+      `[config] config/legal/${legalId}.json must use id "${legalId}" but has "${documentId}"`
+    )
+  }
+
+  legalSurfaceIds.add(legalId)
+
+  if (entry.prerender) {
+    legalPrerenderRoutes.push(entry.path)
+  }
+
+  if (entry.sitemap) {
+    legalSitemapRoutes.push(entry.path)
+  }
+}
+
+for (const legalId of legalDocumentIndex.keys()) {
+  if (!legalSurfaceIds.has(legalId)) {
+    throw new Error(
+      `[config] config/legal/${legalId}.json exists but no corresponding route is declared in config/route-surfaces.json`
+    )
+  }
+}
 const toTrimmedString = (value) => (typeof value === 'string' ? value.trim() : '')
 const toTextList = (value) =>
   Array.isArray(value)
@@ -79,12 +153,21 @@ const site = loadJson('site.json')
 const links = loadJson('links.json')
 const profile = loadJson('profile.json')
 const llms = loadOptionalJson('llms.json', {})
-const siteUrl = trimTrailingSlash(site.siteUrl)
-const routes = ['/', '/contact', '/gtc', '/privacy', '/license', '/impressum']
-const sitemapRoutes = [
+const appBaseUrl = resolveAppBasePath({
+  siteUrl: site.siteUrl,
+  configuredBaseUrl: process.env.NUXT_APP_BASE_URL,
+  repository: resolveRepositorySegment(),
+  isProduction: process.env.NODE_ENV === 'production'
+})
+const siteUrl = resolvePublicSiteUrl(site.siteUrl, appBaseUrl)
+const legalPrerenderPaths = Array.from(new Set(legalPrerenderRoutes))
+const legalSitemapPaths = Array.from(new Set(legalSitemapRoutes))
+const routes = ['/', ...legalPrerenderPaths]
+const sitemapRoutes = Array.from(new Set([
   ...routes,
+  ...legalSitemapPaths,
   ...(site.discovery?.includeLlmsTxtInSitemap ? ['/llms.txt'] : [])
-]
+]))
 
 const roleLines = Array.isArray(profile.roleLine)
   ? profile.roleLine.map((entry) => toTrimmedString(entry)).filter(Boolean)
@@ -143,7 +226,7 @@ const renderLinksByCategory = (title) => {
     (entry) => `### ${entry.label}\n${entry.lines.join('\n')}`
   )
 
-  return renderSection(title, blocks)
+  return renderSection(title, [blocks.length ? blocks.join('\n\n') : ''])
 }
 
 const renderProfileSection = (title) => {

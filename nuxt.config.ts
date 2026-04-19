@@ -1,5 +1,7 @@
 import rawSiteConfig from './config/site.json'
+import routeSurfacesConfig from './config/route-surfaces.json'
 import { basename } from 'node:path'
+import { parseLegalRouteSurfaces, resolveAppBasePath } from './utils/site-config-contract.mjs'
 import { fileURLToPath } from 'node:url'
 
 type SiteConfig = {
@@ -21,31 +23,6 @@ const runtimeEnvironment = globalThis as typeof globalThis & {
   }
 }
 
-const normalizeBaseUrl = (value?: string | null) => {
-  const trimmed = value?.trim()
-
-  if (!trimmed || trimmed === '/') {
-    return '/'
-  }
-
-  return `/${trimmed.replace(/^\/+|\/+$/g, '')}/`
-}
-
-const parseSiteUrl = (value: string) => {
-  const trimmed = value.trim()
-  const candidates = trimmed.includes('://') ? [trimmed] : [trimmed, `https://${trimmed.replace(/^\/+/, '')}`]
-
-  for (const candidate of candidates) {
-    try {
-      return new URL(candidate)
-    } catch {
-      continue
-    }
-  }
-
-  return null
-}
-
 const resolveRepositorySegment = () => {
   const repository = runtimeEnvironment.process?.env?.GITHUB_REPOSITORY?.trim()
   const repositoryName = repository?.split('/')[1]?.trim()
@@ -57,32 +34,17 @@ const resolveRepositorySegment = () => {
   return basename(rootDir.replace(/[\\/]+$/, ''))
 }
 
-const inferBaseUrlFromSiteUrl = (siteUrl: string) => {
-  const parsedSiteUrl = parseSiteUrl(siteUrl)
-
-  if (!parsedSiteUrl) {
-    return '/'
-  }
-
-  const pathname = parsedSiteUrl.pathname.replace(/\/+$/, '')
-
-  if (pathname && pathname !== '/') {
-    return normalizeBaseUrl(pathname)
-  }
-
-  const isProductionBuild = runtimeEnvironment.process?.env?.NODE_ENV === 'production'
-
-  if (isProductionBuild && parsedSiteUrl.hostname === 'example.com') {
-    return normalizeBaseUrl(resolveRepositorySegment())
-  }
-
-  return '/'
-}
-
 const configuredAppBaseUrl = runtimeEnvironment.process?.env?.NUXT_APP_BASE_URL
-const appBaseUrl = configuredAppBaseUrl?.trim()
-  ? normalizeBaseUrl(configuredAppBaseUrl)
-  : inferBaseUrlFromSiteUrl(siteConfig.siteUrl)
+const appBaseUrl = resolveAppBasePath({
+  siteUrl: siteConfig.siteUrl,
+  configuredBaseUrl: configuredAppBaseUrl,
+  repository: resolveRepositorySegment(),
+  isProduction: runtimeEnvironment.process?.env?.NODE_ENV === 'production'
+})
+const legalRouteSurfaces = parseLegalRouteSurfaces(routeSurfacesConfig as unknown)
+const legalPrerenderRoutes = legalRouteSurfaces
+  .filter((entry) => entry.prerender)
+  .map((entry) => entry.path)
 
 const publicAppConfig = {
   appBaseUrl
@@ -134,7 +96,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/', '/contact', '/gtc', '/privacy', '/license', '/impressum', '/embed/tiles', '/embed/badges', '/embed/list']
+      routes: ['/', ...legalPrerenderRoutes, '/embed/tiles', '/embed/list']
     }
   }
 })

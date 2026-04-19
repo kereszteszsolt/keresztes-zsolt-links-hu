@@ -19,11 +19,15 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { legalDocuments, site } = useSiteData()
+const { legalDocumentManifest, site } = useSiteData()
 const { toAbsoluteUrl } = useSiteSeo()
 
 const documentId = String(route.params.document ?? '').trim().toLowerCase()
-const legalDocument = legalDocuments.find((entry) => entry.id === documentId) ?? null
+const legalDocumentMatch = legalDocumentManifest.find(
+  (entry) => entry.id === documentId || entry.path === `/${documentId}`
+)
+const legalDocument = legalDocumentMatch?.document ?? null
+const legalRoutePath = legalDocumentMatch?.path ?? ''
 
 if (!legalDocument) {
   throw createError({
@@ -36,7 +40,7 @@ const { resolvedActions: resolvedLegalActions } = useResolvedLegalActions(legalD
 
 const pageTitle = `${legalDocument.title} | ${site.siteTitle}`
 const pageDescription = `${legalDocument.title} a(z) ${site.siteName} webhelyhez.`
-const pageUrl = toAbsoluteUrl(`/${legalDocument.id}`)
+const pageUrl = toAbsoluteUrl(legalRoutePath)
 
 useHead({
   link: [
