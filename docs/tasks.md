@@ -1,36 +1,42 @@
 # Tasks
 
-## Setup
-- Create the Nuxt starter structure and keep `Your Name` as the example profile.
-- Keep the app single-language and drive the language setting from `config/site.json`.
-- Confirm the project base path works for both root hosting and GitHub Pages hosting.
+Use this checklist when changing the starter or preparing a release.
+It is meant to protect the project contract, not to capture one-time implementation history.
 
-## Content
-- Move all visible copy into config files.
-- Keep profile, links, contact, and legal content in separate JSON files.
-- Keep richer `llms.txt` structure in its own JSON file while reusing existing profile and link data.
-- Replace placeholder values with fork-friendly examples that are easy to edit.
+## Product Integrity
 
-## UI
-- Reuse the reference layout and styling approach for the hero, link list, and footer.
-- Keep reusable `/embed/tiles`, `/embed/list`, and `/embed/badges` routes working.
-- Support tag filtering across all embed routes and color query overrides for `/embed/tiles` and `/embed/list`.
-- Keep the implementation simple and config-driven.
-- Make sure the page still looks correct on mobile and desktop.
+- Confirm the homepage still presents one clear profile identity, hero summary, and primary link directory.
+- Confirm the starter remains single-language and that language metadata still comes from `config/site.json`.
+- Confirm the public experience still works as a config-first starter rather than a hard-coded site.
 
-## SEO And Crawlability
-- Add canonical, Open Graph, Twitter, and structured data settings from config.
-- Add search-facing metadata plus optional AI-facing summary text and `llms.txt` output from config.
-- Generate or prerender the static SEO files and legal routes.
+## Content Model
 
-## Legal
-- Create direct routes for `contact`, `gtc`, `privacy`, `license`, and `impressum`.
-- Keep each legal page backed by its own JSON config.
-- Support protected legal email actions instead of plain server-rendered `mailto:` values when needed.
+- Confirm new user-facing content is added to `config/` and typed in `types/config.ts`.
+- Confirm `config/site.json` remains the source of truth for language, canonical behavior, announcement state, and template-preview mode.
+- Confirm placeholder content stays fork-friendly and does not imply real ownership or production-ready legal text.
+- Confirm UI labels, profile content, links, legal content, and AI-facing copy remain separated by responsibility.
 
-## Release
-- Publish the generated `.output/public` site to the `gh-pages` branch without the `gh-pages` package.
-- Include `.nojekyll` in the generated output for GitHub Pages.
-- Honor `config/site.json > deploy.cname` in the deploy flow.
-- Document the fork-and-deploy path for GitHub Pages.
-- Check the production build, generated output, and embed routes before release.
+## Routes And Presentation
+
+- Confirm `/`, `/embed/list`, `/embed/tiles`, and direct legal routes still render correctly.
+- Confirm embed filtering and styling parameters continue to match the documented route contract.
+- Confirm homepage and legal pages still behave correctly on mobile and desktop layouts.
+
+## SEO, Discovery, And Legal
+
+- Confirm canonical URLs, share metadata, and structured data still derive from resolved site config.
+- Confirm `robots.txt`, `sitemap.xml`, and `llms.txt` stay aligned with the current content model.
+- Confirm each legal document remains directly routable and not modal-only.
+- Confirm protected legal email actions still avoid exposing plain addresses in static markup.
+
+## Deployment Readiness
+
+- Confirm base-path handling still works for both root hosting and GitHub Pages project hosting.
+- Confirm generated output remains suitable for publishing from `.output/public`.
+- Confirm `.nojekyll` and optional `deploy.cname` behavior still match the deploy flow.
+
+## Documentation Hygiene
+
+- Update [user-stories.md](./user-stories.md) if public behavior or intended audience changes.
+- Update [architecture.md](./architecture.md) if config responsibilities, routes, or composable boundaries change.
+- Update the root [README](../README.md) when onboarding, editing, or deployment steps change.
