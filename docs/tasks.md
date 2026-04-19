@@ -29,7 +29,8 @@
 - Support protected legal email actions instead of plain server-rendered `mailto:` values when needed.
 
 ## Release
-- Add `gh-pages` to the deployment flow.
+- Publish the generated `.output/public` site to the `gh-pages` branch without the `gh-pages` package.
+- Include `.nojekyll` in the generated output for GitHub Pages.
 - Honor `config/site.json > deploy.cname` in the deploy flow.
 - Document the fork-and-deploy path for GitHub Pages.
 - Check the production build, generated output, and embed routes before release.

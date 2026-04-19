@@ -21,6 +21,13 @@ Examples:
 
 The planning docs below still reflect the upstream starter build-out, so treat them as project notes rather than a strict source of truth for every current implementation detail.
 
+Current deploy shape:
+
+- GitHub Pages serves the `gh-pages` branch
+- the published branch content comes from `.output/public`
+- `.nojekyll` is included in the generated static output
+- the repo workflow deploys automatically on pushes to `main`
+
 - [implementation-plan.md](./implementation-plan.md) - step-by-step build plan from setup to release
 - [user-stories.md](./user-stories.md) - short 80/20 stories for the public and fork-owner surface
 - [tasks.md](./tasks.md) - practical task checklist

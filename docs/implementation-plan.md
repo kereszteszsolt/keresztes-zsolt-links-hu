@@ -19,7 +19,7 @@ Build a clean Nuxt profile-links starter that ships with example `Your Name` dat
 5. Add SEO defaults plus optional AI-facing discovery helpers from config, including language, canonical URL, metadata, structured data, and `llms.txt`.
 6. Split legal content into separate routes so each policy page can be indexed and linked directly.
 7. Add protected legal email actions that render only on the client.
-8. Add GitHub Pages support with `gh-pages`, static SEO generation, default `gh-pages` branch publishing, and base-path handling for repo deployments.
+8. Add GitHub Pages support with static SEO generation, default `gh-pages` branch publishing from `.output/public`, `.nojekyll`, and base-path handling for repo deployments.
 9. Write fork instructions that tell the user exactly which config files to edit and how to deploy their copy.
 10. Verify the starter with a local build, a generate step, and a quick review of the published output path, including embed routes.
 

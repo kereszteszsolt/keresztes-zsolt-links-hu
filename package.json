@@ -14,12 +14,9 @@
     "pregenerate": "node ./scripts/sync-static-seo.mjs",
     "generate": "npm run clean && nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "npm run generate && gh-pages -d .output/public -t --nojekyll -f"
+    "deploy": "npm run generate && node ./scripts/deploy-gh-pages.mjs"
   },
   "dependencies": {
     "nuxt": "^3.21.2"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }

@@ -13,6 +13,16 @@ Unlike this repository, the template is intentionally prepared for reuse and inc
 
 This repository should be understood as a real, live project built from that template, not as a general-purpose starter or example project.
 
+## Deployment
+
+This site is published as a static GitHub Pages branch deploy.
+
+- `npm run generate` writes the static site to `.output/public`
+- `npm run deploy` generates the site and force-pushes the contents of `.output/public` to the `gh-pages` branch
+- `.nojekyll` and `CNAME` are shipped from `public/`, so the deployed branch stays GitHub Pages ready
+
+The repository also includes a GitHub Actions workflow that runs the same deploy flow on pushes to `main`.
+
 ## Embeds
 
 This repo exposes three reusable embed routes:
