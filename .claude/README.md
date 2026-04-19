@@ -1,4 +1,4 @@
-# Codex Workspace
+# Claude Workspace
 
 This is a thin bridge file.
 
@@ -14,4 +14,4 @@ Use the matching `.ai/` paths for the full content:
 
 Use `../.aiplan/` as the shared temporary planning workspace during active multi-agent execution.
 
-Update `.ai/` first and keep `.codex/` lightweight.
+Update `.ai/` first and keep `.claude/` lightweight.

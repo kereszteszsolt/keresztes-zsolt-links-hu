@@ -1,25 +1,15 @@
 # Subagents
 
-This file is the canonical index for reusable agent roles in this repository.
-Repo-level Codex guidance lives in `AGENTS.md`.
+Use these role files when delegating focused work inside this repository.
 
-Canonical agent files:
+- `senior-developer`: use for `implement`, `build`, `refactor`, `fix`, `integrate`
+- `business-analyst`: use for `requirements`, `scope`, `clarify`, `acceptance criteria`, `user flow`
+- `product-owner`: use for `priority`, `MVP`, `tradeoff`, `roadmap`, `ship now`
+- `architect`: use for `architecture`, `structure`, `boundary`, `pattern`, `long-term`
+- `tester`: use for `test`, `verify`, `regression`, `QA`, `edge case`
+- `ui-ux-specialist`: use for `layout`, `UX`, `hierarchy`, `conversion`, `accessibility`
+- `seo-aeo-geo-specialist`: use for `SEO`, `metadata`, `schema`, `AEO`, `GEO`, `discoverability`
 
-- [Product Planner](./product-planner.md)
-- [UX Design Analyst](./ux-design-analyst.md)
-- [SEO And Content Architect](./seo-and-content-architect.md)
-- [Documentation And Release Engineer](./documentation-and-release-engineer.md)
-- [QA Reviewer](./qa-reviewer.md)
-- [AI Memory And Agent Files Specialist](./ai-memory-and-agent-files-specialist.md)
+For non-trivial requests, split the work into subtasks, pick the best-fit specialist for each part, and use `.aiplan/` to track plan, argument, and consensus.
 
-Mirror layers:
-
-- `.codex/agents/` keeps thin duplicate reference files for Codex-facing discovery.
-- `.github/agents/` keeps thin duplicate reference files and GitHub custom agent profiles.
-
-## Orchestration
-
-- Use multiple subagents when a task naturally breaks into separate analysis, planning, implementation, or verification work.
-- For medium or larger tasks, prefer a planning-oriented pass, an implementation pass, and a review or QA pass when those responsibilities can be split cleanly.
-- Keep trivial edits lightweight and avoid extra agent overhead when parallel work would add more ceremony than value.
-- Use [Product Planner](./product-planner.md) for sequencing and [QA Reviewer](./qa-reviewer.md) for cleanup and verification when those roles fit the task.
+GitHub Copilot custom agent profiles for these same roles live in `.github/agents/*.agent.md` and should stay aligned with these canonical role definitions.

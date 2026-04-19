@@ -1,19 +1,32 @@
-Keep this repository config-first and fork-friendly.
+Canonical project guidance lives in `.ai/`.
 
-The canonical AI memory lives in `.ai/`.
+Use this file as the GitHub Copilot repository-wide entrypoint.
 
-The canonical workflow rule lives in `.ai/`: plan first, use multiple subagents when a task has distinct subtasks, proactively clean up obvious type/lint/editor errors introduced by generated code, and keep new non-config source/docs on the repo's Apache 2.0 header pattern.
+For non-trivial work:
 
-Config files should stay comment-free and fork-friendly, with visible ownership and name metadata living in editable config values.
+1. Read `.ai/rules/multi-agent-execution.md` and `.ai/rules/project-architecture.md`.
+2. Read `.ai/rules/adding-new-feature.md` for delivery flow.
+3. Use `.aiplan/` for plan, argument, and consensus while the task is active.
+4. Choose the best-fit role from `.ai/agents/subagents.md` or the matching `.github/agents/*.agent.md` profile.
+5. Apply the matching rule and skill instructions from `.github/instructions/`.
 
-When editing `AGENTS.md`, `.ai/**`, `.codex/**`, or `.github/**`, start from:
+When editing AI guidance or Copilot configuration:
 
-- `.ai/README.md`
-- `.ai/agents/subagents.md`
-- `.ai/notes/architecture.md`
-- `.ai/notes/design-audit.md`
-- `.ai/plans/project-plan.md`
+- use `.ai/rules/guidance-structure.md`
+- keep `.ai/` canonical
+- keep only `.ai/agents/`, `.ai/rules/`, and `.ai/skills/` as canonical `.ai` folders
+- keep `.github/instructions/` and `.github/agents/` aligned with `.ai/`
+- keep `.github/` as a thin GitHub Copilot adapter layer
+- clean up temporary `.aiplan/` files when the task is fully executed
 
-Treat `.codex/` and `.github/` as thin integration layers that point back to `.ai/`.
-Do not create competing copies of the real AI memory.
-Never commit automatically.
+Current project defaults:
+
+- Nuxt
+- Vue
+- TypeScript
+- ESLint
+- Vanilla CSS
+- config-first content in `config/*.json`
+- single-language live profile links site
+- static-friendly output for GitHub Pages
+- direct legal routes plus `robots.txt`, `sitemap.xml`, and `llms.txt` discovery assets

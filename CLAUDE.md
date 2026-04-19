@@ -1,8 +1,8 @@
-# Agent Guide
+# Claude Guide
 
 Canonical project guidance lives in `.ai/`.
 
-The `.codex/` and `.claude/` folders intentionally mirror the same subfolders and filenames, but only as thin bridge files that point back to `.ai/`. Update `.ai/` first and keep both adapter folders lightweight.
+The `.claude/` folder intentionally mirrors the same subfolders and filenames, but only as thin bridge files that point back to `.ai/`. Update `.ai/` first and keep `.claude/` lightweight.
 
 The `.github/` folder is the GitHub Copilot adapter layer. Keep it aligned with `.ai/` and avoid turning it into a second source of truth.
 
